@@ -5,4 +5,5 @@
 		<div class="content">$Content</div>
 	</article>
 		$CommentsForm
+		$Form
 </div>
