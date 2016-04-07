@@ -1,0 +1,47 @@
+// target the 'fields', which are the inputs and labels, in the userforms
+.form-step > .field, .CompositeField {
+    margin-top: $margin-md;
+}
+
+form nav {
+    margin-top: $margin-md;
+}
+
+
+.optionset li, .middleColumn {
+    // allow radio/checkbox inputs to be positioned correctly
+    position: relative;
+}
+
+.optionset li {
+    //top spacing between checkboxes and radios for a stacked layout
+    margin-top: $margin-sm;
+}
+
+// Base checkbox and radio styling
+
+input[type="radio"], input[type="checkbox"] {
+    position: absolute;
+    opacity: 0; // hide from view, but it's clickable on mobile
+    z-index: 100;
+    top: $checkbox-width / 2.5;
+    left: $checkbox-width / 2.5;
+}
+
+input[type="radio"] + label:before, input[type="checkbox"] + label:before {
+    //use a blank space to get the height correct
+    content: "\00a0"; //;
+    display: inline-block;
+    //ensure even widhts/heights for the radial gradient to sit in the middle
+    width: $checkbox-width;
+    height: $checkbox-width;
+    background: $input-bg;
+    border: 1px solid $input-border;
+    position: relative;
+    font-family: "FontAwesome";
+    line-height: 30px;
+    text-align: center;
+    @include font-size($body-copy-size);
+    //align to baseline of label
+    margin: 0 10px -2px 0;
+}

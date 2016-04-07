@@ -1,0 +1,14 @@
+
+input[type="checkbox"]:checked ~ label:before {
+    content: "";
+    color: $brand-primary;
+}
+
+input[type="radio"] + label:before {
+    border-radius: 50%;
+}
+
+// validation styling
+input[type="radio"] + label.error:before {
+    border: 2px solid $brand-warning;
+}

@@ -1,0 +1,13 @@
+input[type="radio"] {
+  ;
+}
+
+.checkboxset-inline, input[type="radio"] {
+    float: left;
+}
+
+.checkboxset input[type="checkbox"]:checked ~ label:before, #Form_RssFeedGeneratorForm_SelectDeselectAll input[type="checkbox"]:checked ~ label:after, #Form_Form_SelectDeselectAll input[type="checkbox"]:checked ~ label:after, .subscriptions .checkboxset input[type="checkbox"]:checked ~ label:after, input.checkbox:checked + label:before {
+    content: "";
+    color: $brand-primary;
+}
+
