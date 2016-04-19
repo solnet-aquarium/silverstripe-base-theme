@@ -11,6 +11,945 @@
   position: absolute; }
 
 /* This mixin creates an arrow as an inline element. Any spacing or placement will have to be further defined */
+/*! Reflex v1.0.9 - https://github.com/leejordan/reflex */
+/*
+ *
+ * Reflex is a flexbox grid which provides a way to take advantage of emerging
+ * flexbox support while providing a fall back to inline-block on older browsers
+ *
+ * Built by Lee Jordan G.C.S.E.
+ * email: ldjordan@gmail.com
+ * github: https://github.com/leejordan
+ *
+ * Structure and calculations are inspired by twitter bootstrap
+ *
+ */
+/* line 6, ../scss/_2_tools/reflex/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 9, ../scss/_2_tools/reflex/_grid.scss */
+*:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 18, ../scss/_2_tools/reflex/_grid.scss */
+.grid {
+  display: inline-block;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  zoom: 1;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  letter-spacing: -0.31em !important;
+  word-spacing: -0.43em !important;
+  list-style-type: none; }
+/* line 29, ../scss/_2_tools/reflex/_grid.scss */
+.grid:before, .grid:after {
+  letter-spacing: normal;
+  word-spacing: normal;
+  white-space: normal;
+  max-width: 100%; }
+/* line 35, ../scss/_2_tools/reflex/_grid.scss */
+.grid *:before, .grid *:after {
+  letter-spacing: normal;
+  word-spacing: normal;
+  white-space: normal; }
+/* line 41, ../scss/_2_tools/reflex/_grid.scss */
+.grid .grid {
+  -ms-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto; }
+
+/* line 53, ../scss/_2_tools/reflex/_grid.scss */
+[class*="grid__col-"] {
+  display: inline-block;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  zoom: 1;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  text-align: left;
+  text-align: start;
+  text-align: initial;
+  -moz-text-align-last: left;
+  -moz-text-align-last: start;
+  -moz-text-align-last: initial;
+  text-align-last: left;
+  text-align-last: start;
+  text-align-last: initial;
+  letter-spacing: normal;
+  word-spacing: normal;
+  white-space: normal;
+  position: relative;
+  width: 100%;
+  vertical-align: top;
+  padding: 1em; }
+
+/* line 61, ../scss/_2_tools/reflex/_grid.scss */
+.grid__cell {
+  position: relative;
+  display: block;
+  -ms-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto; }
+
+/* line 68, ../scss/_2_tools/reflex/_grid.scss */
+_:-ms-fullscreen, :root .grid__cell {
+  width: 100%; }
+
+/* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+.grid__col-12 {
+  width: 100%; }
+
+/* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+.grid__col-11 {
+  width: 91.66667%; }
+
+/* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+.grid__col-10 {
+  width: 83.33333%; }
+
+/* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+.grid__col-9 {
+  width: 75%; }
+
+/* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+.grid__col-8 {
+  width: 66.66667%; }
+
+/* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+.grid__col-7 {
+  width: 58.33333%; }
+
+/* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+.grid__col-6 {
+  width: 50%; }
+
+/* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+.grid__col-5 {
+  width: 41.66667%; }
+
+/* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+.grid__col-4 {
+  width: 33.33333%; }
+
+/* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+.grid__col-3 {
+  width: 25%; }
+
+/* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+.grid__col-2 {
+  width: 16.66667%; }
+
+/* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+.grid__col-1 {
+  width: 8.33333%; }
+
+@media (min-width: 480px) {
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-xs-12 {
+    width: 100%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-xs-11 {
+    width: 91.66667%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-xs-10 {
+    width: 83.33333%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-xs-9 {
+    width: 75%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-xs-8 {
+    width: 66.66667%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-xs-7 {
+    width: 58.33333%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-xs-6 {
+    width: 50%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-xs-5 {
+    width: 41.66667%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-xs-4 {
+    width: 33.33333%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-xs-3 {
+    width: 25%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-xs-2 {
+    width: 16.66667%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-xs-1 {
+    width: 8.33333%; } }
+@media (min-width: 768px) {
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-sm-12 {
+    width: 100%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-sm-11 {
+    width: 91.66667%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-sm-10 {
+    width: 83.33333%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-sm-9 {
+    width: 75%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-sm-8 {
+    width: 66.66667%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-sm-7 {
+    width: 58.33333%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-sm-6 {
+    width: 50%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-sm-5 {
+    width: 41.66667%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-sm-4 {
+    width: 33.33333%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-sm-3 {
+    width: 25%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-sm-2 {
+    width: 16.66667%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-sm-1 {
+    width: 8.33333%; } }
+@media (min-width: 992px) {
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-md-12 {
+    width: 100%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-md-11 {
+    width: 91.66667%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-md-10 {
+    width: 83.33333%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-md-9 {
+    width: 75%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-md-8 {
+    width: 66.66667%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-md-7 {
+    width: 58.33333%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-md-6 {
+    width: 50%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-md-5 {
+    width: 41.66667%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-md-4 {
+    width: 33.33333%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-md-3 {
+    width: 25%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-md-2 {
+    width: 16.66667%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-md-1 {
+    width: 8.33333%; } }
+@media (min-width: 1200px) {
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-lg-12 {
+    width: 100%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-lg-11 {
+    width: 91.66667%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-lg-10 {
+    width: 83.33333%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-lg-9 {
+    width: 75%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-lg-8 {
+    width: 66.66667%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-lg-7 {
+    width: 58.33333%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-lg-6 {
+    width: 50%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-lg-5 {
+    width: 41.66667%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-lg-4 {
+    width: 33.33333%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-lg-3 {
+    width: 25%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-lg-2 {
+    width: 16.66667%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-lg-1 {
+    width: 8.33333%; } }
+@media (min-width: 1600px) {
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-xlg-12 {
+    width: 100%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-xlg-11 {
+    width: 91.66667%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-xlg-10 {
+    width: 83.33333%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-xlg-9 {
+    width: 75%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-xlg-8 {
+    width: 66.66667%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-xlg-7 {
+    width: 58.33333%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-xlg-6 {
+    width: 50%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-xlg-5 {
+    width: 41.66667%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-xlg-4 {
+    width: 33.33333%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-xlg-3 {
+    width: 25%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-xlg-2 {
+    width: 16.66667%; }
+
+  /* line 24, ../scss/_2_tools/reflex/_mixins.scss */
+  .grid__col-xlg-1 {
+    width: 8.33333%; } }
+/* line 103, ../scss/_2_tools/reflex/_grid.scss */
+.grid__col-auto {
+  -ms-flex: 1 0 0px;
+  -webkit-flex: 1 0 0px;
+  flex: 1 0 0px;
+  width: auto !important;
+  max-width: 100%; }
+
+@media (min-width: 480px) {
+  /* line 108, ../scss/_2_tools/reflex/_grid.scss */
+  .grid__col-xs-auto {
+    -ms-flex: 1 0 0px;
+    -webkit-flex: 1 0 0px;
+    flex: 1 0 0px;
+    width: auto !important;
+    max-width: 100%; } }
+@media (min-width: 768px) {
+  /* line 114, ../scss/_2_tools/reflex/_grid.scss */
+  .grid__col-sm-auto {
+    -ms-flex: 1 0 0px;
+    -webkit-flex: 1 0 0px;
+    flex: 1 0 0px;
+    width: auto !important;
+    max-width: 100%; } }
+@media (min-width: 992px) {
+  /* line 120, ../scss/_2_tools/reflex/_grid.scss */
+  .grid__col-md-auto {
+    -ms-flex: 1 0 0px;
+    -webkit-flex: 1 0 0px;
+    flex: 1 0 0px;
+    width: auto !important;
+    max-width: 100%; } }
+@media (min-width: 1200px) {
+  /* line 126, ../scss/_2_tools/reflex/_grid.scss */
+  .grid__col-lg-auto {
+    -ms-flex: 1 0 0px;
+    -webkit-flex: 1 0 0px;
+    flex: 1 0 0px;
+    width: auto !important;
+    max-width: 100%; } }
+@media (min-width: 1600px) {
+  /* line 132, ../scss/_2_tools/reflex/_grid.scss */
+  .grid__col-xlg-auto {
+    -ms-flex: 1 0 0px;
+    -webkit-flex: 1 0 0px;
+    flex: 1 0 0px;
+    width: auto !important;
+    max-width: 100%; } }
+/* line 119, ../scss/_2_tools/reflex/_mixins.scss */
+.grid--order-12 {
+  -ms-flex-order: 12;
+  -webkit-order: 12;
+  order: 12; }
+
+/* line 119, ../scss/_2_tools/reflex/_mixins.scss */
+.grid--order-11 {
+  -ms-flex-order: 11;
+  -webkit-order: 11;
+  order: 11; }
+
+/* line 119, ../scss/_2_tools/reflex/_mixins.scss */
+.grid--order-10 {
+  -ms-flex-order: 10;
+  -webkit-order: 10;
+  order: 10; }
+
+/* line 119, ../scss/_2_tools/reflex/_mixins.scss */
+.grid--order-9 {
+  -ms-flex-order: 9;
+  -webkit-order: 9;
+  order: 9; }
+
+/* line 119, ../scss/_2_tools/reflex/_mixins.scss */
+.grid--order-8 {
+  -ms-flex-order: 8;
+  -webkit-order: 8;
+  order: 8; }
+
+/* line 119, ../scss/_2_tools/reflex/_mixins.scss */
+.grid--order-7 {
+  -ms-flex-order: 7;
+  -webkit-order: 7;
+  order: 7; }
+
+/* line 119, ../scss/_2_tools/reflex/_mixins.scss */
+.grid--order-6 {
+  -ms-flex-order: 6;
+  -webkit-order: 6;
+  order: 6; }
+
+/* line 119, ../scss/_2_tools/reflex/_mixins.scss */
+.grid--order-5 {
+  -ms-flex-order: 5;
+  -webkit-order: 5;
+  order: 5; }
+
+/* line 119, ../scss/_2_tools/reflex/_mixins.scss */
+.grid--order-4 {
+  -ms-flex-order: 4;
+  -webkit-order: 4;
+  order: 4; }
+
+/* line 119, ../scss/_2_tools/reflex/_mixins.scss */
+.grid--order-3 {
+  -ms-flex-order: 3;
+  -webkit-order: 3;
+  order: 3; }
+
+/* line 119, ../scss/_2_tools/reflex/_mixins.scss */
+.grid--order-2 {
+  -ms-flex-order: 2;
+  -webkit-order: 2;
+  order: 2; }
+
+/* line 119, ../scss/_2_tools/reflex/_mixins.scss */
+.grid--order-1 {
+  -ms-flex-order: 1;
+  -webkit-order: 1;
+  order: 1; }
+
+/* line 119, ../scss/_2_tools/reflex/_mixins.scss */
+.grid--order-0 {
+  -ms-flex-order: 0;
+  -webkit-order: 0;
+  order: 0; }
+
+/* line 10, ../scss/_2_tools/reflex/_helpers.scss */
+.grid--bleed [class*="grid__col-"] {
+  padding: 0; }
+
+/* line 19, ../scss/_2_tools/reflex/_helpers.scss */
+.grid--wrap {
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+/* line 23, ../scss/_2_tools/reflex/_helpers.scss */
+.grid--no-wrap {
+  -ms-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap; }
+
+/* line 27, ../scss/_2_tools/reflex/_helpers.scss */
+.grid--wrap-reverse {
+  -ms-flex-wrap: wrap-reverse;
+  -webkit-flex-wrap: wrap-reverse;
+  flex-wrap: wrap-reverse; }
+
+/* line 35, ../scss/_2_tools/reflex/_helpers.scss */
+.grid--direction-row {
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row; }
+
+/* line 39, ../scss/_2_tools/reflex/_helpers.scss */
+.grid--direction-row-reverse {
+  -ms-flex-direction: row-reverse;
+  -webkit-flex-direction: row-reverse;
+  flex-direction: row-reverse; }
+
+/* line 43, ../scss/_2_tools/reflex/_helpers.scss */
+.grid--direction-column {
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column; }
+
+/* line 47, ../scss/_2_tools/reflex/_helpers.scss */
+.grid--direction-column-reverse {
+  -ms-flex-direction: column-reverse;
+  -webkit-flex-direction: column-reverse;
+  flex-direction: column-reverse; }
+
+/* line 55, ../scss/_2_tools/reflex/_helpers.scss */
+.grid--align-start {
+  -ms-flex-align: flex-start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start; }
+
+/* line 59, ../scss/_2_tools/reflex/_helpers.scss */
+.grid--align-end {
+  -ms-flex-align: flex-end;
+  -webkit-align-items: flex-end;
+  align-items: flex-end; }
+/* line 63, ../scss/_2_tools/reflex/_helpers.scss */
+.grid--align-end [class*="grid__col-"] {
+  vertical-align: bottom; }
+
+/* line 68, ../scss/_2_tools/reflex/_helpers.scss */
+.grid--align-center {
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center; }
+/* line 72, ../scss/_2_tools/reflex/_helpers.scss */
+.grid--align-center [class*="grid__col-"] {
+  vertical-align: middle; }
+
+/* line 77, ../scss/_2_tools/reflex/_helpers.scss */
+.grid--align-baseline {
+  -ms-flex-align: baseline;
+  -webkit-align-items: baseline;
+  align-items: baseline; }
+/* line 81, ../scss/_2_tools/reflex/_helpers.scss */
+.grid--align-baseline [class*="grid__col-"] {
+  vertical-align: baseline; }
+
+/* line 90, ../scss/_2_tools/reflex/_helpers.scss */
+.grid--align-content-start {
+  -ms-flex-line-pack: flex-start;
+  -webkit-align-content: flex-start;
+  align-content: flex-start; }
+
+/* line 94, ../scss/_2_tools/reflex/_helpers.scss */
+.grid--align-content-end {
+  -ms-flex-line-pack: flex-end;
+  -webkit-align-content: flex-end;
+  align-content: flex-end; }
+/* line 98, ../scss/_2_tools/reflex/_helpers.scss */
+.grid--align-content-end [class*="grid__col-"] {
+  vertical-align: bottom; }
+
+/* line 103, ../scss/_2_tools/reflex/_helpers.scss */
+.grid--align-content-center {
+  -ms-flex-line-pack: center;
+  -webkit-align-content: center;
+  align-content: center; }
+
+/* line 107, ../scss/_2_tools/reflex/_helpers.scss */
+.grid--align-content-space-between {
+  -ms-flex-line-pack: space-between;
+  -webkit-align-content: space-between;
+  align-content: space-between; }
+
+/* line 111, ../scss/_2_tools/reflex/_helpers.scss */
+.grid--align-content-space-around {
+  -ms-flex-line-pack: space-around;
+  -webkit-align-content: space-around;
+  align-content: space-around; }
+
+/* line 121, ../scss/_2_tools/reflex/_helpers.scss */
+.grid--align-self-stretch {
+  -ms-flex-item-align: stretch;
+  -webkit-align-self: stretch;
+  align-self: stretch; }
+
+/* line 125, ../scss/_2_tools/reflex/_helpers.scss */
+.grid--align-self-start {
+  -ms-flex-item-align: flex-start;
+  -webkit-align-self: flex-start;
+  align-self: flex-start; }
+
+/* line 129, ../scss/_2_tools/reflex/_helpers.scss */
+.grid--align-self-end {
+  -ms-flex-item-align: flex-end;
+  -webkit-align-self: flex-end;
+  align-self: flex-end;
+  vertical-align: bottom; }
+
+/* line 134, ../scss/_2_tools/reflex/_helpers.scss */
+.grid--align-self-center {
+  -ms-flex-item-align: center;
+  -webkit-align-self: center;
+  align-self: center;
+  vertical-align: middle; }
+
+/* line 139, ../scss/_2_tools/reflex/_helpers.scss */
+.grid--align-self-baseline {
+  -ms-flex-item-align: baseline;
+  -webkit-align-self: baseline;
+  align-self: baseline;
+  vertical-align: baseline; }
+
+/* line 148, ../scss/_2_tools/reflex/_helpers.scss */
+.grid--justify-start {
+  text-align: left;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start; }
+
+/* line 152, ../scss/_2_tools/reflex/_helpers.scss */
+.grid--justify-end {
+  text-align: right;
+  -moz-text-align-last: right;
+  text-align-last: right;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end; }
+/* line 155, ../scss/_2_tools/reflex/_helpers.scss */
+.grid--justify-end .grid__cell {
+  text-align: left;
+  text-align: start;
+  text-align: initial;
+  -moz-text-align-last: left;
+  -moz-text-align-last: start;
+  -moz-text-align-last: initial;
+  text-align-last: left;
+  text-align-last: start;
+  text-align-last: initial; }
+
+/* line 160, ../scss/_2_tools/reflex/_helpers.scss */
+.grid--justify-center {
+  text-align: center;
+  -moz-text-align-last: center;
+  text-align-last: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center; }
+/* line 163, ../scss/_2_tools/reflex/_helpers.scss */
+.grid--justify-center .grid__cell {
+  text-align: left;
+  text-align: start;
+  text-align: initial;
+  -moz-text-align-last: left;
+  -moz-text-align-last: start;
+  -moz-text-align-last: initial;
+  text-align-last: left;
+  text-align-last: start;
+  text-align-last: initial; }
+
+/* line 168, ../scss/_2_tools/reflex/_helpers.scss */
+.grid--justify-space-between {
+  text-align: justify;
+  -moz-text-align-last: justify;
+  text-align-last: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between; }
+/* line 171, ../scss/_2_tools/reflex/_helpers.scss */
+.grid--justify-space-between .grid__cell {
+  text-align: left;
+  text-align: start;
+  text-align: initial;
+  -moz-text-align-last: left;
+  -moz-text-align-last: start;
+  -moz-text-align-last: initial;
+  text-align-last: left;
+  text-align-last: start;
+  text-align-last: initial; }
+
+/* line 176, ../scss/_2_tools/reflex/_helpers.scss */
+.grid--justify-space-around {
+  text-align: justify;
+  -moz-text-align-last: justify;
+  text-align-last: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-around;
+  justify-content: space-around; }
+/* line 179, ../scss/_2_tools/reflex/_helpers.scss */
+.grid--justify-space-around .grid__cell {
+  text-align: left;
+  text-align: start;
+  text-align: initial;
+  -moz-text-align-last: left;
+  -moz-text-align-last: start;
+  -moz-text-align-last: initial;
+  text-align-last: left;
+  text-align-last: start;
+  text-align-last: initial; }
+
+/* line 188, ../scss/_2_tools/reflex/_helpers.scss */
+.grid__col--bleed {
+  padding: 0; }
+
+/* line 196, ../scss/_2_tools/reflex/_helpers.scss */
+.grid__cell--padding-sm {
+  padding: 0.5em; }
+
+/* line 200, ../scss/_2_tools/reflex/_helpers.scss */
+.grid__cell--padding-md {
+  padding: 1em; }
+
+/* line 204, ../scss/_2_tools/reflex/_helpers.scss */
+.grid__cell--padding-lg {
+  padding: 2em; }
+
+/* line 208, ../scss/_2_tools/reflex/_helpers.scss */
+.grid__cell-img {
+  display: block;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+  flex: 0 0 auto;
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
+  width: 100%;
+  height: auto; }
+
+/* line 219, ../scss/_2_tools/reflex/_helpers.scss */
+.grid__cell-footer {
+  display: inline-block;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  zoom: 1;
+  width: 100%;
+  margin-top: auto; }
+
+/* line 2, ../scss/_2_tools/_helpers.scss */
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table; }
+/* line 7, ../scss/_2_tools/_helpers.scss */
+.clearfix:after {
+  clear: both; }
+
+/* Container used for styling the custom select, the buttom class below adds the
+ * bg gradient, corners, etc. */
+/* line 3, ../scss/_2_tools/_custom-select.scss */
+.custom-select {
+  position: relative;
+  display: block; }
+
+/* This is the native select, we're making everything but the text invisible so
+ * we can see the button styles in the wrapper */
+/* line 10, ../scss/_2_tools/_custom-select.scss */
+.custom-select select {
+  width: 100%;
+  margin: 0;
+  outline: none;
+  padding: .6em .8em .5em .8em;
+  /* Prefixed box-sizing rules necessary for older browsers */
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* Font size must be 16px to prevent iOS page zoom on focus */
+  font-size: 16px; }
+
+/* Custom arrow sits on top of the select - could be an image, SVG, icon font,
+ * etc. or the arrow could just baked into the bg image on the select. */
+/* line 28, ../scss/_2_tools/_custom-select.scss */
+.custom-select::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 1em;
+  z-index: 2;
+  /* These hacks make the select behind the arrow clickable in some browsers */
+  pointer-events: none;
+  display: none; }
+
+@supports (-webkit-appearance: none) or (appearance: none) or ((-moz-appearance: none) and (mask-type: alpha)) {
+  /* Show custom arrow */
+  /* line 46, ../scss/_2_tools/_custom-select.scss */
+  .custom-select::after {
+    display: block; }
+
+  /* Remove select styling */
+  /* line 51, ../scss/_2_tools/_custom-select.scss */
+  .custom-select select {
+    padding-right: 2em;
+    /* Match-01 */
+    /* inside @supports so that iOS <= 8 display the native arrow */
+    background: none;
+    /* Match-04 */
+    /* inside @supports so that Android <= 4.3 display the native arrow */
+    border: 1px solid transparent;
+    /* Match-05 */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; }
+
+  /* line 62, ../scss/_2_tools/_custom-select.scss */
+  .custom-select select:focus {
+    border-color: #aaa;
+    /* Match-03 */ } }
+/* line 3, ../scss/_2_tools/_form-debug.scss */
+.debug-key {
+  padding: 60px;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  width: auto;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #ccc;
+  border-bottom-left-radius: 10px; }
+/* line 4, ../scss/_2_tools/_form-debug.scss */
+.debug-key[style] {
+  display: block !important; }
+/* line 16, ../scss/_2_tools/_form-debug.scss */
+.debug-key ul {
+  list-style: none; }
+/* line 19, ../scss/_2_tools/_form-debug.scss */
+.debug-key li {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  padding-right: 70px;
+  height: 0;
+  overflow: hidden; }
+/* line 26, ../scss/_2_tools/_form-debug.scss */
+.debug-key li:first-child {
+  margin: 0; }
+/* line 30, ../scss/_2_tools/_form-debug.scss */
+.debug-key li span {
+  position: absolute;
+  width: 60px;
+  height: 30px;
+  top: 0;
+  right: 0; }
+/* line 38, ../scss/_2_tools/_form-debug.scss */
+.debug-key input[type=checkbox] {
+  display: inline-block;
+  position: static;
+  width: auto;
+  height: auto;
+  margin-right: 10px; }
+/* line 44, ../scss/_2_tools/_form-debug.scss */
+.debug-key input[type=checkbox] + span {
+  font-weight: 700;
+  display: inline-block;
+  position: static; }
+/* line 50, ../scss/_2_tools/_form-debug.scss */
+.debug-key input[type=checkbox]:checked ~ ul li {
+  height: auto;
+  margin: 20px 0 0 0; }
+
+/* line 59, ../scss/_2_tools/_form-debug.scss */
+input[type="radio"], input[type="checkbox"] {
+  opacity: 1 !important; }
+
+/* line 64, ../scss/_2_tools/_form-debug.scss */
+.form-step > .field, .CompositeField, .input-colour {
+  background: #FF746D; }
+
+/* line 68, ../scss/_2_tools/_form-debug.scss */
+legend, .legend-colour {
+  background: #DE99E8; }
+
+/* line 73, ../scss/_2_tools/_form-debug.scss */
+.optionset li, .middleColumn, .parent-colour {
+  background: #B0A5FF; }
+
+/* line 78, ../scss/_2_tools/_form-debug.scss */
+.optionset li label, .middleColumn > :not(input).checkbox, .checkbox-label, .radio-labels-colour {
+  background: #E89958; }
+
+/* line 82, ../scss/_2_tools/_form-debug.scss */
+.field.text, .text-labels-colour {
+  background: #FFD649; }
+
+/* line 86, ../scss/_2_tools/_form-debug.scss */
+.field-support-text, .field-support-colour {
+  background: #9AFFDE; }
+
+/* line 90, ../scss/_2_tools/_form-debug.scss */
+.field-validation, .field-validation-colour {
+  background: red !important;
+  color: #fff !important; }
+
 /* line 4, ../scss/_3_generic/_reset.scss */
 input, label, textarea, legend, form li, form ul, form ol, fieldset {
   margin: 0;
@@ -23,7 +962,7 @@ fieldset {
   border: none; }
 
 /* line 22, ../scss/_3_generic/_reset.scss */
-ul {
+form ul {
   list-style: none; }
 
 /* line 30, ../scss/_3_generic/_reset.scss */
@@ -38,39 +977,61 @@ ul {
   padding: 0;
   margin: 0; }
 
-/* line 2, ../scss/_4_base/forms/_inputs-base.scss */
-.form-step > .field, .CompositeField {
+/* line 9, ../scss/_4_base/forms/_form-layout.scss */
+.form-step > .field, .CompositeField, .middleColumn fieldset, .field.text {
   margin-top: 40px; }
 
-/* line 6, ../scss/_4_base/forms/_inputs-base.scss */
-form nav {
-  margin-top: 40px; }
-
-/* line 11, ../scss/_4_base/forms/_inputs-base.scss */
+/* line 25, ../scss/_4_base/forms/_form-layout.scss */
 .optionset li, .middleColumn {
   position: relative; }
 
-/* line 16, ../scss/_4_base/forms/_inputs-base.scss */
-.optionset li {
-  margin-top: 20px; }
+/* line 31, ../scss/_4_base/forms/_form-layout.scss */
+.middleColumn .field:first-child {
+  margin-top: 0; }
 
-/* line 23, ../scss/_4_base/forms/_inputs-base.scss */
+/* line 36, ../scss/_4_base/forms/_form-layout.scss */
+.optionset li label, .middleColumn > :not(input).checkbox, .checkbox-label {
+  margin-top: 20px;
+  min-height: 32px;
+  padding-left: 52px; }
+
+/* line 43, ../scss/_4_base/forms/_form-layout.scss */
+.checkbox .middleColumn {
+  margin-left: -52px; }
+
+/* line 50, ../scss/_4_base/forms/_form-layout.scss */
+form nav {
+  margin-top: 40px; }
+
+/* line 1, ../scss/_4_base/forms/_inputs-base.scss */
+label {
+  display: inline-block; }
+
+/* line 8, ../scss/_4_base/forms/_inputs-base.scss */
+input[type="text"], input[type="tel"], input[type="email"], input[type="date"], input[type="number"], select {
+  height: 42px; }
+
+/* line 15, ../scss/_4_base/forms/_inputs-base.scss */
 input[type="radio"], input[type="checkbox"] {
   position: absolute;
   opacity: 0;
   z-index: 100;
-  top: 12.8px;
-  left: 12.8px; }
+  top: 16px;
+  left: 0;
+  width: 32px;
+  height: 32px; }
 
-/* line 31, ../scss/_4_base/forms/_inputs-base.scss */
+/* line 25, ../scss/_4_base/forms/_inputs-base.scss */
 input[type="radio"] + label:before, input[type="checkbox"] + label:before {
   content: "\00a0";
-  display: inline-block;
+  display: block;
   width: 32px;
   height: 32px;
   background: #ececec;
   border: 1px solid #602d68;
-  position: relative;
+  position: absolute;
+  top: 16px;
+  left: 0;
   font-family: "FontAwesome";
   line-height: 30px;
   text-align: center;
@@ -78,16 +1039,16 @@ input[type="radio"] + label:before, input[type="checkbox"] + label:before {
   font-size: 1.4rem;
   margin: 0 10px -2px 0; }
 
-/* line 2, ../scss/_4_base/forms/_inputs-radios.scss */
-input[type="checkbox"]:checked ~ label:before {
-  content: "";
-  color: #602d68; }
-
-/* line 7, ../scss/_4_base/forms/_inputs-radios.scss */
+/* line 1, ../scss/_4_base/forms/_inputs-radios.scss */
 input[type="radio"] + label:before {
   border-radius: 50%; }
 
-/* line 12, ../scss/_4_base/forms/_inputs-radios.scss */
+/* line 5, ../scss/_4_base/forms/_inputs-radios.scss */
+input[type="radio"]:checked + label:before {
+  background: #005470;
+  background: radial-gradient(#005470 0%, #005470 40%, #ffffff 44%); }
+
+/* line 11, ../scss/_4_base/forms/_inputs-radios.scss */
 input[type="radio"] + label.error:before {
   border: 2px solid #bf3746; }
 

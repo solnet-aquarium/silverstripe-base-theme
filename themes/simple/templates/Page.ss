@@ -31,6 +31,21 @@ Change it, enhance it and most importantly enjoy it!
 </head>
 <body class="$ClassName<% if not $Menu(2) %> no-sidebar<% end_if %>" <% if $i18nScriptDirection %>dir="$i18nScriptDirection"<% end_if %>>
 <% include Header %>
+<%-- For debugging form layout only!!!! --%>
+	<div class="debug-key" style="display: none;">
+		<input type="checkbox" name="visibility" value="On" checked><span>Colour key visibility</span>
+		<ul>
+			<li>Legends: <span class="legend-colour"></span></li>
+			<li>All inputs/label groups: <span class="input-colour"></span></li>
+			<li>Direct parent containers of all input tags: <span class="parent-colour"></span></li>
+			<li>Labels for text inputs: <span class="text-labels-colour"></span></li>
+			<li>Labels for radio/checkbox inputs: <span class="radio-labels-colour"></span></li>
+			<li>Field support text: <span class="field-support-colour"></span></li>
+			<li>Field validation text: <span class="field-validation-colour"></span></li>
+		</ul>
+	</div>
+
+
 <div class="main" role="main">
 	<div class="inner line">
 		$Layout
