@@ -867,7 +867,7 @@ _:-ms-fullscreen, :root .grid__cell {
     /* Match-03 */ } }
 /* line 3, ../scss/_2_tools/_form-debug.scss */
 .debug-key {
-  padding: 60px;
+  padding: 20px;
   position: fixed;
   z-index: 1000;
   top: 0;
@@ -879,10 +879,15 @@ _:-ms-fullscreen, :root .grid__cell {
 /* line 4, ../scss/_2_tools/_form-debug.scss */
 .debug-key[style] {
   display: block !important; }
-/* line 16, ../scss/_2_tools/_form-debug.scss */
+/* line 17, ../scss/_2_tools/_form-debug.scss */
 .debug-key ul {
-  list-style: none; }
-/* line 19, ../scss/_2_tools/_form-debug.scss */
+  list-style: none;
+  margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: margin 0.25s ease-in-out, max-height 0.25s ease-in-out;
+  transition: margin 0.25s ease-in-out, max-height 0.25s ease-in-out; }
+/* line 24, ../scss/_2_tools/_form-debug.scss */
 .debug-key li {
   margin: 0;
   padding: 0;
@@ -890,63 +895,69 @@ _:-ms-fullscreen, :root .grid__cell {
   padding-right: 70px;
   height: 0;
   overflow: hidden; }
-/* line 26, ../scss/_2_tools/_form-debug.scss */
+/* line 31, ../scss/_2_tools/_form-debug.scss */
 .debug-key li:first-child {
   margin: 0; }
-/* line 30, ../scss/_2_tools/_form-debug.scss */
+/* line 35, ../scss/_2_tools/_form-debug.scss */
 .debug-key li span {
   position: absolute;
   width: 60px;
   height: 30px;
   top: 0;
   right: 0; }
-/* line 38, ../scss/_2_tools/_form-debug.scss */
+/* line 43, ../scss/_2_tools/_form-debug.scss */
 .debug-key input[type=checkbox] {
   display: inline-block;
   position: static;
   width: auto;
   height: auto;
   margin-right: 10px; }
-/* line 44, ../scss/_2_tools/_form-debug.scss */
+/* line 49, ../scss/_2_tools/_form-debug.scss */
 .debug-key input[type=checkbox] + span {
   font-weight: 700;
   display: inline-block;
   position: static; }
-/* line 50, ../scss/_2_tools/_form-debug.scss */
+/* line 55, ../scss/_2_tools/_form-debug.scss */
+.debug-key input[type=checkbox]:checked ~ ul {
+  margin: 20px 60px 60px 40px;
+  max-height: 300px;
+  -webkit-transition: margin 0.25s ease-in-out, max-height 0.25s ease-in-out;
+  transition: margin 0.25s ease-in-out, max-height 0.25s ease-in-out; }
+/* line 59, ../scss/_2_tools/_form-debug.scss */
 .debug-key input[type=checkbox]:checked ~ ul li {
   height: auto;
   margin: 20px 0 0 0; }
 
-/* line 59, ../scss/_2_tools/_form-debug.scss */
+/* line 69, ../scss/_2_tools/_form-debug.scss */
 input[type="radio"], input[type="checkbox"] {
   opacity: 1 !important; }
 
-/* line 64, ../scss/_2_tools/_form-debug.scss */
+/* line 74, ../scss/_2_tools/_form-debug.scss */
 .form-step > .field, .CompositeField, .input-colour {
   background: #FF746D; }
 
-/* line 68, ../scss/_2_tools/_form-debug.scss */
+/* line 78, ../scss/_2_tools/_form-debug.scss */
 legend, .legend-colour {
   background: #DE99E8; }
 
-/* line 73, ../scss/_2_tools/_form-debug.scss */
+/* line 83, ../scss/_2_tools/_form-debug.scss */
 .optionset li, .middleColumn, .parent-colour {
   background: #B0A5FF; }
 
-/* line 78, ../scss/_2_tools/_form-debug.scss */
+/* line 88, ../scss/_2_tools/_form-debug.scss */
 .optionset li label, .middleColumn > :not(input).checkbox, .checkbox-label, .radio-labels-colour {
   background: #E89958; }
 
-/* line 82, ../scss/_2_tools/_form-debug.scss */
+/* line 92, ../scss/_2_tools/_form-debug.scss */
 .field.text, .text-labels-colour {
   background: #FFD649; }
 
-/* line 86, ../scss/_2_tools/_form-debug.scss */
+/* line 96, ../scss/_2_tools/_form-debug.scss */
 .field-support-text, .field-support-colour {
   background: #9AFFDE; }
 
-/* line 90, ../scss/_2_tools/_form-debug.scss */
-.field-validation, .field-validation-colour {
+/* line 100, ../scss/_2_tools/_form-debug.scss */
+.field-validation, .field-validation-colour, .error.message {
   background: red !important;
   color: #fff !important; }
 
@@ -1060,3 +1071,8 @@ input[type="radio"] + label.error:before {
 .checkboxset input[type="checkbox"]:checked ~ label:before, #Form_RssFeedGeneratorForm_SelectDeselectAll input[type="checkbox"]:checked ~ label:after, #Form_Form_SelectDeselectAll input[type="checkbox"]:checked ~ label:after, .subscriptions .checkboxset input[type="checkbox"]:checked ~ label:after, input.checkbox:checked + label:before {
   content: "";
   color: #602d68; }
+
+/* line 4, ../scss/_4_base/forms/_validation.scss */
+.field-validation, .error.message {
+  background: red !important;
+  color: #fff !important; }
