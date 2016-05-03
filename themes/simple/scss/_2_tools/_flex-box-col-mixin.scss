@@ -1,0 +1,47 @@
+// FLEX BOX columns MIXINS
+// 
+
+
+@mixin fb-columns($col-list, $gutter:0) {
+  $collective-col-value : 0;
+  //add all values together to get the number of columns needed
+  @for $i from 1 through length($col-list) {
+    $collective-col-value: $collective-col-value + nth($col-list, $i);
+  }
+  //work out the base percentage for the 1 values
+  $base-percent: 100/$collective-col-value;
+  
+  @if(length($col-list) == 1){
+    flex: 1 1 100%;
+    width: 100%;
+  } 
+  
+  @if (length($col-list) == 2){
+    $nth-value: "odd";
+    @for $i from 1 through 2 {
+      $col-value: nth($col-list, $i);     
+      &:nth-child(#{$nth-value}) {
+        // fall back
+        width: ($base-percent * $col-value * 1%) - $gutter;
+        //display: inline-block;
+        vertical-align: top;
+        flex: 1 1 ($base-percent * $col-value * 1%) - $gutter;
+      }
+      $nth-value: "even";
+    }
+  }
+  
+  @if (length($col-list) > 2){
+    //iterate through the list
+    @for $i from 1 through length($col-list) {
+      $col-value: nth($col-list, $i);
+      &:nth-child(#{length($col-list)}n + #{$i}) {
+        // fall back
+        width: ($base-percent * $col-value * 1%) - $gutter;
+        //display: inline-block;
+        vertical-align: top;
+        flex: 0 0 ($base-percent * $col-value * 1%) - $gutter;
+      }
+    }
+  }
+}

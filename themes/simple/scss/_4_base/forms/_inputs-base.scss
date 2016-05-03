@@ -3,16 +3,46 @@ label {
     display: inline-block;
 }
 
+input, textarea, select {
+    @include font-size(14);
+}
 
-// text input styling
-input[type="text"], input[type="tel"], input[type="email"], input[type="date"], input[type="number"], select {
+// text input styling, not checkboxes or radios
+input[type="text"], 
+input[type="tel"], 
+input[type="email"], 
+input[type="date"], 
+input[type="number"], 
+input[type="url"], 
+input[type="search"] {
+    width: $input-width;
     height: $input-height;
+    padding-left: $input-left-pad;
+    background: $input-bg;
+    border: 1px solid $input-border;
+    @include placeholder($placeholder);
+}
+
+// Textarea styling
+textarea {
+    width: $input-width;
+    padding: $input-left-pad;
+    background: $input-bg;
+    border: 1px solid $input-border;
+}
+
+// field focus styling, minus selects
+input:focus, textarea:focus {
+    border: 1px solid $input-focus;
+    @include box-shadow(none);
+    outline: none;
 }
 
 
 // Base checkbox and radio styling
 
-input[type="radio"], input[type="checkbox"] {
+input[type="radio"], 
+input[type="checkbox"] {
     position: absolute;
     opacity: 0; // hide from view, but it's clickable on mobile
     z-index: 100;

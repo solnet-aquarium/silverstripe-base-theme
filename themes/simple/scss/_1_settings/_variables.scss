@@ -2,25 +2,24 @@
 
 //NOTE: These variables are referenced by Bootstrap. So any variables defined here will overwrite the BS ones!!!!!!!!!!!!
 
-$brand-primary:             #602d68;
-$brand-primary-lt:          #7f5987;
-$brand-primary-lter:        #a082a4;
-$brand-primary-bg:          #efeaf0;
-$brand-primary-bg-md:       #e7e0e8; //Alerts background
-$brand-primary-dk:          #421949;
+$brand-primary-70:          #421949;
+$brand-primary:             #214385;
 $brand-primary-40:          #c0acc3;
+$brand-primary-30:          #a082a4;
+$brand-primary-10:          #efeaf0;
+$brand-primary-20:          #e7e0e8; //Alerts background
 
 $brand-secondary:           #005470;
-$brand-secondary-lt:        #33758c;
-$brand-secondary-lter:      #6698a9;
-$brand-secondary-lightest:  #edf3f5;
+$brand-secondary-40:        #33758c;
+$brand-secondary-30:        #6698a9;
+$brand-secondary-10:        #edf3f5;
 
 $brand-teritary:            #e34397;
 $brand-teritary-30:         #f7c7e0;
 $brand-neutral:             #3f3f42;
 
-$brand-success:             $brand-secondary-lt;
-$brand-info:                $brand-primary-lt;
+$brand-success:             $brand-secondary-30;
+$brand-info:                $brand-primary-20;
 $brand-warning:             #bf3746;
 $brand-danger:              $brand-warning;
 
@@ -59,32 +58,51 @@ $font-weight-h6     : 700;
 
 
 $body-copy-size         : 14;
+$body-copy-weight       : 300;
 $body-copy-line-height  : 1.9rem;
 $link-underline-offset  : 0.1rem; // position the link underline. This is influenced by the line height
 $body-copy              : $gray-80;
 
 
+
+// base Media breaks
+
+$screen-xxs                 : 360px;
+$screen-xs                  : 480px;
+$screen-sm                  : 590px;
+$screen-md                  : 768px;
+$screen-lg                  : 992px;
+$screen-xl                  : 1200px;
+
+
+//Grid settings
+
 $layout-gutter-width: 40px;
 
-// Define values for margin helper mixin
-// Values are for mobile screens, which then get modified below for larger screens
+
+
+// Define values for margins
+
 $margin-xs        : $layout-gutter-width/3;
 $margin-sm        : $layout-gutter-width/2; 
-$margin-md        : $layout-gutter-width; // layout gutter width
+$margin-md        : $layout-gutter-width; // match the layout
 $margin-lg        : $layout-gutter-width*1.5;
 $margin-xl        : $layout-gutter-width*2;
-// The modifier is how much the above values increase over media breaks
-// First adjustment (sm screens) is calculated by value X margin-modifier, 
-// Second adjustment (md screens) is calculated by value X (margin-modifier X margin-modifier)
-// Second adjustment (lg screens) is calculated by value X (margin-modifier X margin-modifier X margin-modifier)
-$margin-modifier  : 1.2;
+
 
 
 // Forms
+
 $input-bg         : $gray-10;
 $input-border     : $brand-primary;
 $checkbox-width   : 32px;
+$input-width      : 100%;
 $input-height     : 42px;
+$input-left-pad   : $margin-xs;
+$input-focus      : $brand-primary-70;
+$placeholder      : $gray-70;
+
+
 
 // Tables
 
@@ -93,21 +111,6 @@ $color-table-head-text  :  #fff;
 $color-table-footer     : $gray-70; 
 $color-table-footer-text:  #fff;
 $color-table-cell-bg    : $gray-10;
-
-
-// Set up panel columns
-// 
-$number-of-columns-xs      : 1; //number of columns you want per row on mobile
-$number-of-columns-sm      : 2; //number of columns you want per row on mobile
-$number-of-columns-md      : 3; //number of columns you want per row on tablet
-$number-of-columns-lg      : 3; //number of columns you want per row on desk top
-
-$row-count                 : 8; //number of possible rows. Allow for possible growth, but not the more rows you have, 
-                                // the more CSS is produced, so don't go crazy!!!!!
-                                
-$column-gutter             : 2; //used as a percentage
-$product-panel-height      : auto;
-$product-panel-min-height  : 250px;
 
 
 
@@ -126,8 +129,7 @@ $transition-ease         : ease-in-out;
 $btn-default-width          : 300px;
 $btn-sm-width               : 120px;
 $btn-md-width               : 200px;
-$btn-lg-width               : 300px;
-
+$btn-lg-width               : $btn-default-width;
 
 
 

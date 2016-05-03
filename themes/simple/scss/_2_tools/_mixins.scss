@@ -12,12 +12,17 @@
   font-size: calculateRem($size);
 }
 
+@mixin line-height($size) {
+  line-height: $size * 1px;
+  line-height: calculateRem($size);
+}
+
 // Body copy
 @mixin body-copy() {
   color: $body-copy;
-  font-family: "Fira Sans",Helvetica,Arial,sans-serif;
+  font-family: Helvetica,Arial,sans-serif;
   @include font-size(14);
-  font-weight: 300;
+  font-weight: $body-copy-weight;
 }
 
 
@@ -111,128 +116,6 @@
 
 
 
-// #######################################################
-// A mixin to create panels in set columns. A working version can be viewed here: http://codepen.io/solnet-digital/pen/NPErgr?editors=110
-// REQUIRES BOOTSTRAP GRIDS !!!!!!!!!!!!!
-
-//function to calculate the size of the columns with gutter taken into account. All widths are percentages.
-@mixin calculateCols($col-value, $screen-size-min, $screen-size-max:4000px ) {
-  $gutterCount : $col-value - 1;
-  $gutterSpace : $gutterCount * $column-gutter;
-  $baseWidth : (100 - $gutterSpace) / $col-value;
-
-  @media (min-width: $screen-size-min) and (max-width: $screen-size-max) { 
-    width: ($baseWidth) * 1%;
-    margin-right: $column-gutter * 1%;
-
-    //Create the row breaks and take margins off last childs of each row
-    @for $i from 1 through $row-count {
-      $col-break-point: $col-value * $i + 1; 
-      &:nth-child(#{$col-break-point}) {
-        clear: left; //the introduction of a clear creates the illusion of a new row. No need to set heights of panels
-      }
-      &:nth-child(#{($col-break-point - 1)}) {
-        margin-right: 0 !important;
-      }
-    }  
-  }   
-}
-
-
-
-
-// #######################################################
-// Set helper margins 
-
-$margin-map: (
-'none'        : 0,  
-'xs'          : $margin-xs,
-'sm'          : $margin-sm,
-'md'          : $margin-md,
-'lg'          : $margin-lg,
-'xl'          : $margin-xl
-);
-
-
-
-@mixin set-margin ($selector) {
-    @each $name, $margin-value in $margin-map {
-        .margin-#{$selector}-#{$name} {
-            margin-#{$selector}: $margin-value;
-        }
-    }
-    @media (min-width: $screen-sm) { 
-      @each $name, $margin-value in $margin-map {
-        .margin-#{$selector}-#{$name} {
-            margin-#{$selector}: $margin-value * $margin-modifier;
-        }
-      }
-    }
-    @media (min-width: $screen-md) { 
-      @each $name, $margin-value in $margin-map {
-        .margin-#{$selector}-#{$name} {
-            margin-#{$selector}: $margin-value * ($margin-modifier * $margin-modifier);
-        }
-      }
-    }
-    @media (min-width: $screen-lg) { 
-      @each $name, $margin-value in $margin-map {
-        .margin-#{$selector}-#{$name} {
-            margin-#{$selector}: $margin-value * ($margin-modifier * $margin-modifier * $margin-modifier);
-        }
-      }
-    }
-
-}
-
-@mixin set-multi-margins () {
-    @each $name, $margin-value in $margin-map {
-      .margin-vertical-#{$name} {
-          margin-top: $margin-value;
-          margin-bottom: $margin-value;
-      }
-      .margin-horizontal-#{$name} {
-          margin-left: $margin-value;
-          margin-right: $margin-value;
-      }
-    }
-    @media (min-width: $screen-sm) {
-      @each $name, $margin-value in $margin-map {
-        .margin-vertical-#{$name} {
-            margin-top: $margin-value * ($margin-modifier);
-            margin-bottom: $margin-value * ($margin-modifier);
-        }
-        .margin-horizontal-#{$name} {
-            margin-left: $margin-value * ($margin-modifier);
-            margin-right: $margin-value * ($margin-modifier);
-        }
-      }
-    }
-    @media (min-width: $screen-md) {
-      @each $name, $margin-value in $margin-map {
-        .margin-vertical-#{$name} {
-            margin-top: $margin-value * ($margin-modifier * $margin-modifier);
-            margin-bottom: $margin-value * ($margin-modifier * $margin-modifier);
-        }
-        .margin-horizontal-#{$name} {
-            margin-left: $margin-value * ($margin-modifier * $margin-modifier);
-            margin-right: $margin-value * ($margin-modifier * $margin-modifier);
-        }
-      }
-    }
-    @media (min-width: $screen-lg) {
-      @each $name, $margin-value in $margin-map {
-        .margin-vertical-#{$name} {
-            margin-top: $margin-value * ($margin-modifier * $margin-modifier * $margin-modifier);
-            margin-bottom: $margin-value * ($margin-modifier * $margin-modifier * $margin-modifier);
-        }
-        .margin-horizontal-#{$name} {
-            margin-left: $margin-value * ($margin-modifier * $margin-modifier * $margin-modifier);
-            margin-right: $margin-value * ($margin-modifier * $margin-modifier * $margin-modifier);
-        }
-      }
-    }
-}
 
 
 
@@ -349,12 +232,28 @@ $margin-map: (
    flex-wrap: $value;
 }
 
-@mixin flex($values) {
-  -webkit-box-flex: $values;
-  -moz-box-flex:  $values;
-  -webkit-flex:  $values;
-  -ms-flex:  $values;
-  flex:  $values;
+@mixin flex-flow($val:row, $val2:wrap) {
+  -webkit-flex-flow: $val $val2;
+  flex-flow: $val $val2;
+}
+
+@mixin flex($fg: 1, $fs: null, $fb: null) {
+    
+  // Set a variable to be used by box-flex properties
+  $fg-boxflex: $fg;
+
+  // Box-Flex only supports a flex-grow value so let's grab the
+  // first item in the list and just return that.
+  @if type-of($fg) == 'list' {
+    $fg-boxflex: nth($fg, 1);
+  }
+
+  -webkit-box-flex: $fg-boxflex;
+  -webkit-flex: $fg $fs $fb;
+  -moz-box-flex: $fg-boxflex;
+  -moz-flex: $fg $fs $fb;
+  -ms-flex: $fg $fs $fb;
+  flex: $fg $fs $fb;
 }
 
 @mixin order($val) {
@@ -364,6 +263,13 @@ $margin-map: (
   -webkit-order: $val;  
   order: $val;
 }
+
+@mixin justify($val) {
+  justify-content: $val;
+  -webkit-justify-content: $val;
+}
+
+
 
 
 

@@ -1,0 +1,4 @@
+.btn-action {
+  @include button-base(#ff0000, #fff, transparent, 5px, 20px);
+  @include button-hover(#ff0000, #efefef, transparent);
+}

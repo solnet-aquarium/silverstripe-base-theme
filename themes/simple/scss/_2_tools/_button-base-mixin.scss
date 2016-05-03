@@ -1,0 +1,36 @@
+
+// button styling, lifted from BS and pulled apart for better design flexibility
+ 
+@mixin button-base($color, $background, $border, $padding-v:15px, $padding-h:15px ) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+  padding: $padding-v $padding-h;
+}
+
+@mixin button-hover($color, $background, $border) {
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active {
+    color: $color;
+    background-color: $background;
+    border-color: $border;
+    cursor: pointer;
+  }
+}
+@mixin button-disabled($color, $background, $border) {
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      background-color: $background;
+      border-color: $border;
+    }
+  }
+}
