@@ -1,0 +1,45 @@
+label {
+    // avoid block as this will span the whole width of the parent. This can have unexpected results for the user if they click in the middle of the page and an item is selected.
+    display: inline-block;
+}
+
+
+// text input styling
+input[type="text"], input[type="tel"], input[type="email"], input[type="date"], input[type="number"], select {
+    height: $input-height;
+}
+
+
+// Base checkbox and radio styling
+
+input[type="radio"], input[type="checkbox"] {
+    position: absolute;
+    opacity: 0; // hide from view, but it's clickable on mobile
+    z-index: 100;
+    top: $checkbox-width / 2;
+    left: 0;
+    width: $checkbox-width;
+    height: $checkbox-width;
+}
+
+input[type="radio"] + label:before, 
+input[type="checkbox"] + label:before {
+    //use a blank space to get the height correct
+    content: "\00a0"; //;
+    display: block;
+    //ensure even widhts/heights for the radial gradient to sit in the middle
+    width: $checkbox-width;
+    height: $checkbox-width;
+    background: $input-bg;
+    border: 1px solid $input-border;
+    position: absolute;
+    top: $checkbox-width / 2;
+    left: 0;
+    font-family: "FontAwesome";
+    line-height: 30px;
+    text-align: center;
+    @include font-size($body-copy-size);
+    //align to baseline of label
+    margin: 0 10px -2px 0;
+}
+

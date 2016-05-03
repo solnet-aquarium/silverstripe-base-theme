@@ -1,0 +1,52 @@
+// /////////////////  Debug note \\\\\\\\\\\\\\\\\\\\\\
+// //// In the SASS imports is a debug .scss file \\\\\\
+// //// Switch it on the have all the various parts \\\\
+// //// of the forms coloured in. \\\\\\\\\\\\\\\\\\\\\\
+// 
+
+
+// target the 'fields', which are all the inputs and label groups, in the userforms
+.form-step > .field, .CompositeField, .middleColumn fieldset, .field.text {
+    // create equal spacing between all fields/field groups
+    margin-top: $margin-md;
+}
+
+
+legend {
+
+}
+
+// target text fields/labels for standard inputs (not checkboxes and radios)
+.field.text {
+  
+}
+
+// direct parent containers for all input tags
+.optionset li, .middleColumn {
+    // allow radio/checkbox inputs to be positioned correctly
+    position: relative;
+}
+
+// For nested
+.middleColumn .field:first-child {
+    margin-top: 0;
+}
+
+// target labels of checkbox and radio groups
+.optionset li label, .middleColumn > :not(input).checkbox, .checkbox-label {
+    //top spacing between checkboxes and radios for a stacked layout
+    margin-top: $margin-sm;
+    min-height: $checkbox-width;
+    padding-left: $checkbox-width + ($layout-gutter-width / 2);
+}
+
+.checkbox .middleColumn {
+  //off set the parents middleColumn padding
+  margin-left: ($checkbox-width + ($layout-gutter-width / 2)) * -1;
+  
+}
+
+// form navigation
+form nav {
+    margin-top: $margin-md;
+}

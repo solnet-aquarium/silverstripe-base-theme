@@ -1,0 +1,133 @@
+
+
+//NOTE: These variables are referenced by Bootstrap. So any variables defined here will overwrite the BS ones!!!!!!!!!!!!
+
+$brand-primary:             #602d68;
+$brand-primary-lt:          #7f5987;
+$brand-primary-lter:        #a082a4;
+$brand-primary-bg:          #efeaf0;
+$brand-primary-bg-md:       #e7e0e8; //Alerts background
+$brand-primary-dk:          #421949;
+$brand-primary-40:          #c0acc3;
+
+$brand-secondary:           #005470;
+$brand-secondary-lt:        #33758c;
+$brand-secondary-lter:      #6698a9;
+$brand-secondary-lightest:  #edf3f5;
+
+$brand-teritary:            #e34397;
+$brand-teritary-30:         #f7c7e0;
+$brand-neutral:             #3f3f42;
+
+$brand-success:             $brand-secondary-lt;
+$brand-info:                $brand-primary-lt;
+$brand-warning:             #bf3746;
+$brand-danger:              $brand-warning;
+
+$gray-90:                   $brand-neutral;
+$gray-80:                   #414042;
+$gray-70:                   #8d8c8e;  
+$gray:                      #b3b3b3;
+$gray-40:                   #b3b3b3;  
+$gray-30:                   #c6c6c6; 
+$gray-20:                   #d9d9d9; 
+$gray-10:                   #ececec;
+
+
+// Headings
+
+$font-size-h1     : 36;            
+$font-size-h2     : 28;            
+$font-size-h3     : 22;            
+$font-size-h4     : 20;            
+$font-size-h5     : 18;            
+$font-size-h6     : 14; 
+
+$font-colour-h1     : $brand-secondary;            
+$font-colour-h2     : $brand-primary;            
+$font-colour-h3     : $brand-secondary;           
+$font-colour-h4     : $brand-primary;            
+$font-colour-h5     : $brand-neutral;            
+$font-colour-h6     : $font-colour-h5; 
+
+$font-weight-h1     : 300;            
+$font-weight-h2     : 500;            
+$font-weight-h3     : 500;            
+$font-weight-h4     : 500;            
+$font-weight-h5     : 500;            
+$font-weight-h6     : 700;            
+
+
+$body-copy-size         : 14;
+$body-copy-line-height  : 1.9rem;
+$link-underline-offset  : 0.1rem; // position the link underline. This is influenced by the line height
+$body-copy              : $gray-80;
+
+
+$layout-gutter-width: 40px;
+
+// Define values for margin helper mixin
+// Values are for mobile screens, which then get modified below for larger screens
+$margin-xs        : $layout-gutter-width/3;
+$margin-sm        : $layout-gutter-width/2; 
+$margin-md        : $layout-gutter-width; // layout gutter width
+$margin-lg        : $layout-gutter-width*1.5;
+$margin-xl        : $layout-gutter-width*2;
+// The modifier is how much the above values increase over media breaks
+// First adjustment (sm screens) is calculated by value X margin-modifier, 
+// Second adjustment (md screens) is calculated by value X (margin-modifier X margin-modifier)
+// Second adjustment (lg screens) is calculated by value X (margin-modifier X margin-modifier X margin-modifier)
+$margin-modifier  : 1.2;
+
+
+// Forms
+$input-bg         : $gray-10;
+$input-border     : $brand-primary;
+$checkbox-width   : 32px;
+$input-height     : 42px;
+
+// Tables
+
+$color-table-head       : $brand-primary; 
+$color-table-head-text  :  #fff;
+$color-table-footer     : $gray-70; 
+$color-table-footer-text:  #fff;
+$color-table-cell-bg    : $gray-10;
+
+
+// Set up panel columns
+// 
+$number-of-columns-xs      : 1; //number of columns you want per row on mobile
+$number-of-columns-sm      : 2; //number of columns you want per row on mobile
+$number-of-columns-md      : 3; //number of columns you want per row on tablet
+$number-of-columns-lg      : 3; //number of columns you want per row on desk top
+
+$row-count                 : 8; //number of possible rows. Allow for possible growth, but not the more rows you have, 
+                                // the more CSS is produced, so don't go crazy!!!!!
+                                
+$column-gutter             : 2; //used as a percentage
+$product-panel-height      : auto;
+$product-panel-min-height  : 250px;
+
+
+
+// transition settings and icons
+
+$transition-timing       : 0.5s; 
+$transition-timing-fast  : 0.25s;
+$transition-timing-slow  : 1.5s;
+$transition-ease         : ease-in-out;
+
+
+
+
+// Buttons
+
+$btn-default-width          : 300px;
+$btn-sm-width               : 120px;
+$btn-md-width               : 200px;
+$btn-lg-width               : 300px;
+
+
+
+

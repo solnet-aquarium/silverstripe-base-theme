@@ -1,0 +1,13 @@
+input[type="radio"] + label:before {
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked + label:before {
+    background: $brand-secondary; // fallback for radial gradient failure
+    background: radial-gradient($brand-secondary 0, $brand-secondary 40%, #fff 44%);
+}
+
+// validation styling
+input[type="radio"] + label.error:before {
+    border: 2px solid $brand-warning;
+}

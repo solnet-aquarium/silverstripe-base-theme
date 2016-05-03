@@ -1,0 +1,41 @@
+// Reset for all form elements
+
+
+input, 
+label, 
+textarea, 
+legend, 
+form li, 
+form ul, 
+form ol, 
+fieldset {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    width: auto;
+}
+
+fieldset {
+    border: none;
+}
+
+form ul {
+    list-style: none;
+}
+
+
+
+// Reset SS styles from UserForm.css
+
+.userform .left {
+    margin-bottom: 0;
+    font-weight: 300;
+}
+
+
+.userformsgroup {
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+}

@@ -1,0 +1,103 @@
+// 
+
+.debug-key {
+  &[style] {
+    // show panel if this CSS is switched on
+    display: block !important;
+  }
+  padding: 20px;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  width: auto;
+  background: rgba(255,255,255,0.92);
+  border: 1px solid #ccc;
+  border-bottom-left-radius: 10px;
+  ul {
+    list-style: none;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    @include transition(margin $transition-timing-fast $transition-ease, max-height $transition-timing-fast $transition-ease);
+  }
+  li {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    padding-right: 70px;
+    height: 0;
+    overflow: hidden;
+    &:first-child {
+      margin: 0;
+    }
+  }
+  li span {
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    top: 0;
+    right: 0;
+  }
+  // remove checkbox styling for the key panel
+  input[type=checkbox] {
+    display: inline-block;
+    position: static;
+    width: auto;
+    height: auto;
+    margin-right: 10px;
+    + span {
+      font-weight: 700;
+      display: inline-block;
+      position: static;
+    }
+  }
+  input[type=checkbox]:checked ~ ul {
+    margin: 20px 60px 60px 40px;
+    max-height: 300px;
+    @include transition(margin $transition-timing-fast $transition-ease, max-height $transition-timing-fast $transition-ease);
+    li {
+      height: auto;
+      margin: 20px 0 0 0;
+    }
+  }
+}
+
+
+
+// Show where the radio and checkbox inputs are positioned
+input[type="radio"], input[type="checkbox"] {
+    opacity: 1 !important; // hide from view, but it's clickable on mobile
+}
+
+// target the 'silverstripe fields', which are all the inputs and label groups, in the userforms
+.form-step > .field, .CompositeField, .input-colour {
+    background: #FF746D; // debug highlight : red
+}
+
+legend, .legend-colour {
+    background: #DE99E8; // debug highlight : red-purple
+}
+
+// direct parent containers for all input tags
+.optionset li, .middleColumn, .parent-colour {
+    background: #B0A5FF; // debug highlight : blue-purple
+}
+
+// target labels of checkbox and radio groups
+.optionset li label, .middleColumn > :not(input).checkbox, .checkbox-label, .radio-labels-colour {
+    background: #E89958; // debug highlight : orange
+}
+
+.field.text, .text-labels-colour {
+  background: #FFD649 // Yellow
+}
+
+.field-support-text, .field-support-colour {
+  background: #9AFFDE;
+}
+
+.field-validation, .field-validation-colour, .error.message {
+  background: red !important;
+  color: #fff !important;
+}
