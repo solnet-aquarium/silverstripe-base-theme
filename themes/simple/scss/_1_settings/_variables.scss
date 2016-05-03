@@ -93,15 +93,17 @@ $margin-xl        : $layout-gutter-width*2;
 
 // Forms
 
-$input-bg         : $gray-10;
-$input-border     : $brand-primary;
-$checkbox-width   : 32px;
-$input-width      : 100%;
-$input-height     : 42px;
-$input-left-pad   : $margin-xs;
-$input-focus      : $brand-primary-70;
-$placeholder      : $gray-70;
+$input-bg               : $gray-10;
+$input-border           : $brand-primary;
+$checkbox-width         : 32px;
+$input-width            : 100%;
+$input-height           : 42px;
+$input-left-pad         : $margin-xs;
+$input-focus            : $brand-primary-70;
+$placeholder            : $gray-70;
 
+$fieldset-margin        : $margin-lg;
+$check-radio-top-margin : $margin-sm;
 
 
 // Tables

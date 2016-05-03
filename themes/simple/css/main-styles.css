@@ -76,23 +76,30 @@ button {
 
 /* line 9, ../scss/_4_base/forms/_form-layout.scss */
 .form-step > .field, .CompositeField, .middleColumn fieldset, .field.text {
-  margin-top: 40px; }
+  margin-top: 60px; }
 
 /* line 25, ../scss/_4_base/forms/_form-layout.scss */
 .optionset li, .middleColumn {
   position: relative; }
 
-/* line 31, ../scss/_4_base/forms/_form-layout.scss */
+/* line 33, ../scss/_4_base/forms/_form-layout.scss */
 .middleColumn .field:first-child {
   margin-top: 0; }
 
-/* line 36, ../scss/_4_base/forms/_form-layout.scss */
+/* line 38, ../scss/_4_base/forms/_form-layout.scss */
+.optionset li {
+  margin-top: 20px; }
+/* line 40, ../scss/_4_base/forms/_form-layout.scss */
+.optionset li:first-child {
+  margin-top: 0; }
+
+/* line 47, ../scss/_4_base/forms/_form-layout.scss */
 .optionset li label, .middleColumn > :not(input).checkbox, .checkbox-label {
-  margin-top: 20px;
+  margin-top: 10px;
   min-height: 32px;
   padding-left: 52px; }
 
-/* line 43, ../scss/_4_base/forms/_form-layout.scss */
+/* line 54, ../scss/_4_base/forms/_form-layout.scss */
 .checkbox .middleColumn {
   margin-left: -52px; }
 
@@ -156,14 +163,13 @@ input[type="radio"] + label:before, input[type="checkbox"] + label:before {
   background: #ececec;
   border: 1px solid #214385;
   position: absolute;
-  top: 16px;
+  top: 0;
   left: 0;
   font-family: "FontAwesome";
   line-height: 30px;
   text-align: center;
   font-size: 14px;
-  font-size: 1.4rem;
-  margin: 0 10px -2px 0; }
+  font-size: 1.4rem; }
 
 /* line 1, ../scss/_4_base/forms/_inputs-radios.scss */
 input[type="radio"] + label:before {
@@ -178,11 +184,7 @@ input[type="radio"]:checked + label:before {
 input[type="radio"] + label.error:before {
   border: 2px solid #bf3746; }
 
-/* line 5, ../scss/_4_base/forms/_inputs-checkbox.scss */
-.checkboxset-inline, input[type="radio"] {
-  float: left; }
-
-/* line 9, ../scss/_4_base/forms/_inputs-checkbox.scss */
+/* line 3, ../scss/_4_base/forms/_inputs-checkbox.scss */
 .checkboxset input[type="checkbox"]:checked ~ label:before, input.checkbox:checked + label:before {
   content: "";
   color: #214385; }

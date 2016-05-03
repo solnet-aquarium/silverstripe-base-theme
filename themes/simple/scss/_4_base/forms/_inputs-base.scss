@@ -63,13 +63,11 @@ input[type="checkbox"] + label:before {
     background: $input-bg;
     border: 1px solid $input-border;
     position: absolute;
-    top: $checkbox-width / 2;
+    top: 0;
     left: 0;
     font-family: "FontAwesome";
     line-height: 30px;
     text-align: center;
     @include font-size($body-copy-size);
-    //align to baseline of label
-    margin: 0 10px -2px 0;
 }
 

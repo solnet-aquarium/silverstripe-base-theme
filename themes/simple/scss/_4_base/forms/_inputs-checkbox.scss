@@ -1,10 +1,4 @@
-input[type="radio"] {
-  ;
-}
 
-.checkboxset-inline, input[type="radio"] {
-    float: left;
-}
 
 .checkboxset input[type="checkbox"]:checked ~ label:before, input.checkbox:checked + label:before {
     content: "";
