@@ -96,10 +96,6 @@ button {
 .checkbox .middleColumn {
   margin-left: -52px; }
 
-/* line 50, ../scss/_4_base/forms/_form-layout.scss */
-form nav {
-  margin-top: 40px; }
-
 /* line 1, ../scss/_4_base/forms/_inputs-base.scss */
 label {
   display: inline-block; }
@@ -191,7 +187,7 @@ input[type="radio"] + label.error:before {
   content: "";
   color: #214385; }
 
-/* line 4, ../scss/_4_base/forms/_select.scss */
+/* line 2, ../scss/_4_base/forms/_select.scss */
 .dropdown .middleColumn {
   background: #ececec;
   height: 42px;
@@ -199,7 +195,7 @@ input[type="radio"] + label.error:before {
   width: 50%;
   position: relative;
   z-index: 1; }
-/* line 11, ../scss/_4_base/forms/_select.scss */
+/* line 9, ../scss/_4_base/forms/_select.scss */
 .dropdown .middleColumn:after {
   display: block;
   content: "";
@@ -211,7 +207,7 @@ input[type="radio"] + label.error:before {
   top: 0;
   right: 0;
   z-index: 2; }
-/* line 24, ../scss/_4_base/forms/_select.scss */
+/* line 22, ../scss/_4_base/forms/_select.scss */
 .dropdown .middleColumn select {
   -webkit-appearance: none;
   background: transparent;
@@ -225,7 +221,7 @@ input[type="radio"] + label.error:before {
   /* If you add too much padding here, the options won't show in IE */
   position: relative;
   z-index: 3; }
-/* line 35, ../scss/_4_base/forms/_select.scss */
+/* line 33, ../scss/_4_base/forms/_select.scss */
 .dropdown .middleColumn select:focus {
   border: 1px solid #421949;
   -webkit-box-shadow: none;
@@ -505,3 +501,72 @@ h1 + .intro-hero, h2 + .intro-hero, h3 + .intro-hero {
   background-color: red;
   border-color: transparent;
   cursor: pointer; }
+
+/* line 1, ../scss/_6_components/_form-progress-bar.scss */
+.userform-progress {
+  /* one item */
+  /* two items */
+  /* three items */
+  /* four items */
+  /* 5 items */
+  /* 6 items */
+  /* 7 items */
+  /* 8 items */
+  /* 9 items */
+  /* 10 items */
+  /* 11 items */
+  /* 12 items */
+  /* 13 items */
+  /* 14 items */ }
+/* line 2, ../scss/_6_components/_form-progress-bar.scss */
+.userform-progress li {
+  float: left; }
+/* line 7, ../scss/_6_components/_form-progress-bar.scss */
+.userform-progress li:first-child:nth-last-child(1) {
+  width: 100%; }
+/* line 12, ../scss/_6_components/_form-progress-bar.scss */
+.userform-progress li:first-child:nth-last-child(2), .userform-progress li:first-child:nth-last-child(2) ~ li {
+  width: 50%; }
+/* line 18, ../scss/_6_components/_form-progress-bar.scss */
+.userform-progress li:first-child:nth-last-child(3), .userform-progress li:first-child:nth-last-child(3) ~ li {
+  width: 33.3333%; }
+/* line 24, ../scss/_6_components/_form-progress-bar.scss */
+.userform-progress li:first-child:nth-last-child(4), .userform-progress li:first-child:nth-last-child(4) ~ li {
+  width: 25%; }
+/* line 29, ../scss/_6_components/_form-progress-bar.scss */
+.userform-progress li:first-child:nth-last-child(5), .userform-progress li:first-child:nth-last-child(5) ~ li {
+  width: 20%; }
+/* line 34, ../scss/_6_components/_form-progress-bar.scss */
+.userform-progress li:first-child:nth-last-child(6), .userform-progress li:first-child:nth-last-child(6) ~ li {
+  width: 16.66667%; }
+/* line 39, ../scss/_6_components/_form-progress-bar.scss */
+.userform-progress li:first-child:nth-last-child(7), .userform-progress li:first-child:nth-last-child(7) ~ li {
+  width: 14.28571%; }
+/* line 44, ../scss/_6_components/_form-progress-bar.scss */
+.userform-progress li:first-child:nth-last-child(8), .userform-progress li:first-child:nth-last-child(8) ~ li {
+  width: 12.5%; }
+/* line 49, ../scss/_6_components/_form-progress-bar.scss */
+.userform-progress li:first-child:nth-last-child(9), .userform-progress li:first-child:nth-last-child(9) ~ li {
+  width: 11.11111%; }
+/* line 54, ../scss/_6_components/_form-progress-bar.scss */
+.userform-progress li:first-child:nth-last-child(10), .userform-progress li:first-child:nth-last-child(10) ~ li {
+  width: 10%; }
+/* line 59, ../scss/_6_components/_form-progress-bar.scss */
+.userform-progress li:first-child:nth-last-child(11), .userform-progress li:first-child:nth-last-child(11) ~ li {
+  width: 9.09091%; }
+/* line 64, ../scss/_6_components/_form-progress-bar.scss */
+.userform-progress li:first-child:nth-last-child(12), .userform-progress li:first-child:nth-last-child(12) ~ li {
+  width: 8.33333%; }
+/* line 69, ../scss/_6_components/_form-progress-bar.scss */
+.userform-progress li:first-child:nth-last-child(13), .userform-progress li:first-child:nth-last-child(13) ~ li {
+  width: 7.69231%; }
+/* line 74, ../scss/_6_components/_form-progress-bar.scss */
+.userform-progress li:first-child:nth-last-child(14), .userform-progress li:first-child:nth-last-child(14) ~ li {
+  width: 7.14286%; }
+/* line 81, ../scss/_6_components/_form-progress-bar.scss */
+.userform-progress button {
+  color: #fff;
+  background-color: #005470;
+  border-color: transparent;
+  padding: 15px 15px;
+  width: 100%; }
