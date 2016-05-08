@@ -101,6 +101,7 @@ $input-height           : 42px;
 $input-left-pad         : $margin-xs;
 $input-focus            : $brand-primary-70;
 $placeholder            : $gray-70;
+$input-max-length       : 500px;
 
 $fieldset-margin        : $margin-lg;
 $check-radio-top-margin : $margin-sm;
@@ -134,4 +135,6 @@ $btn-md-width               : 200px;
 $btn-lg-width               : $btn-default-width;
 
 
+// SVG sprite
 
+$svg-sprite-width           : 500;  // leave off units like px

@@ -5,6 +5,24 @@
 		<div class="content">$Content
 
 
+      <h2>Form components</h2>
+
+      
+
+        <form>
+            <fieldset>
+                <legend>Text fields</legend>
+                <label for="std-txt">Standard text field</label>
+                <input id="std-txt" type="text" placeholder="Your placeholder">
+
+                <label for="std-disabled-txt">Standard disabled text field</label>
+                <input id="std-disabled-txt" type="text" disabled placeholder="Your placeholder">
+            </fieldset>
+            <h3>Types for keyboards</h3>
+            <p>text, email, number, tel, url, date</p>
+        </form>
+
+
       <h2>Component testing</h2>
 
       <div class="intro-hero" style="background-image: url('http://blogs.c.yimg.jp/res/blog-ab-eb/koichi_oto/folder/671482/40/32689740/img_0');">

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700");
 /* line 46, ../scss/_2_tools/_mixins.scss */
 .visuallyhidden {
@@ -94,14 +93,18 @@ button {
   margin-top: 0; }
 
 /* line 47, ../scss/_4_base/forms/_form-layout.scss */
+.checkbox .middleColumn {
+  margin-left: -52px; }
+
+/* line 10, ../scss/_4_base/forms/_form-labels.scss */
 .optionset li label, .middleColumn > :not(input).checkbox, .checkbox-label {
   margin-top: 10px;
   min-height: 32px;
   padding-left: 52px; }
 
-/* line 54, ../scss/_4_base/forms/_form-layout.scss */
-.checkbox .middleColumn {
-  margin-left: -52px; }
+/* line 18, ../scss/_4_base/forms/_form-labels.scss */
+label.disabled {
+  opacity: 0.7; }
 
 /* line 1, ../scss/_4_base/forms/_inputs-base.scss */
 label {
@@ -114,7 +117,9 @@ input, textarea, select {
 
 /* line 11, ../scss/_4_base/forms/_inputs-base.scss */
 input[type="text"], input[type="tel"], input[type="email"], input[type="date"], input[type="number"], input[type="url"], input[type="search"] {
+  display: block;
   width: 100%;
+  max-width: 500px;
   height: 42px;
   padding-left: 13.33333px;
   background: #ececec;
@@ -130,14 +135,14 @@ input[type="text"]:-ms-input-placeholder, input[type="tel"]:-ms-input-placeholde
 input[type="text"]::-webkit-input-placeholder, input[type="tel"]::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder, input[type="date"]::-webkit-input-placeholder, input[type="number"]::-webkit-input-placeholder, input[type="url"]::-webkit-input-placeholder, input[type="search"]::-webkit-input-placeholder {
   color: #8d8c8e; }
 
-/* line 27, ../scss/_4_base/forms/_inputs-base.scss */
+/* line 29, ../scss/_4_base/forms/_inputs-base.scss */
 textarea {
   width: 100%;
   padding: 13.33333px;
   background: #ececec;
   border: 1px solid #214385; }
 
-/* line 35, ../scss/_4_base/forms/_inputs-base.scss */
+/* line 37, ../scss/_4_base/forms/_inputs-base.scss */
 input:focus, textarea:focus {
   border: 1px solid #421949;
   -webkit-box-shadow: none;
@@ -145,6 +150,11 @@ input:focus, textarea:focus {
   outline: none; }
 
 /* line 44, ../scss/_4_base/forms/_inputs-base.scss */
+input:disabled {
+  opacity: 0.4;
+  cursor: not-allowed; }
+
+/* line 52, ../scss/_4_base/forms/_inputs-base.scss */
 input[type="radio"], input[type="checkbox"] {
   position: absolute;
   opacity: 0;
@@ -154,7 +164,7 @@ input[type="radio"], input[type="checkbox"] {
   width: 32px;
   height: 32px; }
 
-/* line 55, ../scss/_4_base/forms/_inputs-base.scss */
+/* line 63, ../scss/_4_base/forms/_inputs-base.scss */
 input[type="radio"] + label:before, input[type="checkbox"] + label:before {
   content: "\00a0";
   display: block;
@@ -171,25 +181,25 @@ input[type="radio"] + label:before, input[type="checkbox"] + label:before {
   font-size: 14px;
   font-size: 1.4rem; }
 
-/* line 1, ../scss/_4_base/forms/_inputs-radios.scss */
+/* line 10, ../scss/_4_base/forms/_inputs-radios.scss */
 input[type="radio"] + label:before {
   border-radius: 50%; }
 
-/* line 5, ../scss/_4_base/forms/_inputs-radios.scss */
+/* line 14, ../scss/_4_base/forms/_inputs-radios.scss */
 input[type="radio"]:checked + label:before {
-  background: #005470;
-  background: radial-gradient(#005470 0%, #005470 40%, #ffffff 44%); }
+  background: url("../images/svg-sprite.svg") #ececec -65px -1px;
+  background-size: 320px; }
 
-/* line 11, ../scss/_4_base/forms/_inputs-radios.scss */
+/* line 20, ../scss/_4_base/forms/_inputs-radios.scss */
 input[type="radio"] + label.error:before {
   border: 2px solid #bf3746; }
 
-/* line 3, ../scss/_4_base/forms/_inputs-checkbox.scss */
+/* line 8, ../scss/_4_base/forms/_inputs-checkbox.scss */
 .checkboxset input[type="checkbox"]:checked ~ label:before, input.checkbox:checked + label:before {
-  content: "";
-  color: #214385; }
+  background: url("../images/svg-sprite.svg") #ececec -32px 0;
+  background-size: 320px; }
 
-/* line 2, ../scss/_4_base/forms/_select.scss */
+/* line 10, ../scss/_4_base/forms/_select.scss */
 .dropdown .middleColumn {
   background: #ececec;
   height: 42px;
@@ -197,7 +207,7 @@ input[type="radio"] + label.error:before {
   width: 50%;
   position: relative;
   z-index: 1; }
-/* line 9, ../scss/_4_base/forms/_select.scss */
+/* line 17, ../scss/_4_base/forms/_select.scss */
 .dropdown .middleColumn:after {
   display: block;
   content: "";
@@ -209,7 +219,7 @@ input[type="radio"] + label.error:before {
   top: 0;
   right: 0;
   z-index: 2; }
-/* line 22, ../scss/_4_base/forms/_select.scss */
+/* line 30, ../scss/_4_base/forms/_select.scss */
 .dropdown .middleColumn select {
   -webkit-appearance: none;
   background: transparent;
@@ -223,7 +233,7 @@ input[type="radio"] + label.error:before {
   /* If you add too much padding here, the options won't show in IE */
   position: relative;
   z-index: 3; }
-/* line 33, ../scss/_4_base/forms/_select.scss */
+/* line 41, ../scss/_4_base/forms/_select.scss */
 .dropdown .middleColumn select:focus {
   border: 1px solid #421949;
   -webkit-box-shadow: none;

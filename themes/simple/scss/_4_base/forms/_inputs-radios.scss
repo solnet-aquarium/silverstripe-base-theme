@@ -1,10 +1,19 @@
+// SVG sprite is based on a 50px X 50px grid, with a width of 500px. 
+// To fit it into the checkbox area, say 32px X 32px, we work out the 
+// fractional size of the original (current size divided by original size)
+// then mutiply by the sprite width.  
+
+$svg-sprite-size : ($checkbox-width / 50) * $svg-sprite-width;
+
+
+
 input[type="radio"] + label:before {
   border-radius: 50%;
 }
 
 input[type="radio"]:checked + label:before {
-    background: $brand-secondary; // fallback for radial gradient failure
-    background: radial-gradient($brand-secondary 0, $brand-secondary 40%, #fff 44%);
+    background: url('../images/svg-sprite.svg') $input-bg (($checkbox-width * -2) - 1) -1px; // icon is at position 3 on the sprite sheet. Position 1 has no value, so the modifier is -2. -1 is to adjust to put the dot right in the middle
+    background-size: $svg-sprite-size;
 }
 
 // validation styling

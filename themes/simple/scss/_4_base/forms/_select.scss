@@ -1,3 +1,11 @@
+// SVG sprite is based on a 50px X 50px grid, with a width of 500px or $svg-sprite-width. 
+// To fit it into the checkbox area, say 32px X 32px, we work out the 
+// fractional size of the original (current size divided by original size)
+// then mutiply by the sprite width.
+// The -1 is to allow for border  
+
+$svg-sprite-size : (($input-height - 1) / 50) * $svg-sprite-width;
+
 
 .dropdown .middleColumn {
     background: $input-bg;
@@ -13,7 +21,7 @@
         width: $input-height - 1; // offset for parent border
         height: $input-height - 1;
         background: url('../images/svg-sprite.svg') top left; // arrow icon and background colour or icon area
-        background-size: ($input-height - 1) / 50 * 500; // resize to fit the icon container. Sprite size is 500px wide
+        background-size: $svg-sprite-size;
         position: absolute;
         top: 0;
         right: 0;

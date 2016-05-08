@@ -15,7 +15,9 @@ input[type="date"],
 input[type="number"], 
 input[type="url"], 
 input[type="search"] {
+    display: block; // we want the inputs to stack under the labels
     width: $input-width;
+    max-width: $input-max-length; // set a max width so they don't end up being 1000px wide
     height: $input-height;
     padding-left: $input-left-pad;
     background: $input-bg;
@@ -38,6 +40,12 @@ input:focus, textarea:focus {
     outline: none;
 }
 
+// disabled inputs
+input:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    // use JS to target the corresponding label to add a disabled class to it
+}
 
 // Base checkbox and radio styling
 

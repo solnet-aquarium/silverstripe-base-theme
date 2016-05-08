@@ -34,20 +34,13 @@ legend {
     margin-top: 0;
 }
 
-// spacing between checkboxes and radio's handleed at the list level
+// spacing between checkboxes and radio's are defined at the list level
 .optionset li {
     margin-top: $check-radio-top-margin;
     &:first-child {
         //Remove the top margin off the first checkbox or radio so they sit flush with the legend. This allows legends and labels to have the same spacing control
         margin-top: 0;
     }
-}
-
-// target labels of checkbox and radio groups
-.optionset li label, .middleColumn > :not(input).checkbox, .checkbox-label {
-    margin-top: 10px; //Push the label down so it is visially aligned in the middle with the checkbox or radio button
-    min-height: $checkbox-width;
-    padding-left: $checkbox-width + ($layout-gutter-width / 2);
 }
 
 
