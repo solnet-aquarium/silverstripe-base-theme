@@ -41,11 +41,12 @@ input:focus, textarea:focus {
 }
 
 // disabled inputs
-input:disabled {
+input:disabled, select:disabled, textarea:disabled {
     opacity: 0.4;
     cursor: not-allowed;
     // use JS to target the corresponding label to add a disabled class to it
 }
+
 
 // Base checkbox and radio styling
 

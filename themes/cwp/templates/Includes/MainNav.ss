@@ -1,4 +1,4 @@
-<div id="mainNav" class="navbar noCorners">
+<section id="mainNav" class="navbar noCorners">
 	<div class="navbar-inner">
 		<div class="container">
 			<div id="SearchGroup">
@@ -40,4 +40,4 @@
 			</div>
 		</div>
 	</div>
-</div>
+</section>

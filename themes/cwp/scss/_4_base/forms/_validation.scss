@@ -1,7 +1,27 @@
 
 // Validation styling
 
-.field-validation, .error.message {
-  background: red !important;
-  color: #fff !important;
+input.error {
+  border-color: $brand-warning !important;
+}
+
+.error-msg {
+  display: block; // change the spans into block elements
+  margin-top: $input-label-v-spacing; // spacing between the input and it's error message
+  color: $brand-warning;
+}
+
+fieldset {
+  .error-msg {
+    display: none;
+  }
+  &.error {
+    .error-msg {
+      display: block;
+    }
+    input[type="checkbox"] ~ label:before, input[type="radio"] ~ label:before {
+      @include transition(border-color $transition-timing);
+      border-color: $brand-warning;
+    }
+  }
 }

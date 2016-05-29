@@ -3,43 +3,87 @@ label {
     display: inline-block;
 }
 
+input, textarea, select {
+    @include font-size(14);
+}
 
-// text input styling
-input[type="text"], input[type="tel"], input[type="email"], input[type="date"], input[type="number"], select {
+// text input styling, not checkboxes or radios
+input[type="text"], 
+input[type="tel"], 
+input[type="email"], 
+input[type="date"], 
+input[type="number"], 
+input[type="url"], 
+input[type="search"] {
+    display: block; // we want the inputs to stack under the labels
+    width: $input-width;
+    max-width: $input-max-length; // set a max width so they don't end up being 1000px wide
     height: $input-height;
+    padding-left: $input-left-pad;
+    background: $input-bg;
+    border: 1px solid $input-border;
+    @include placeholder($placeholder);
+    margin-top: $input-label-v-spacing; // spacing between the input and it's label
+}
+
+// Textarea styling
+textarea {
+    width: $input-width;
+    padding: $input-left-pad;
+    background: $input-bg;
+    border: 1px solid $input-border;
+}
+
+// field focus styling, minus selects
+input:focus, textarea:focus {
+    border: 1px solid $input-focus;
+    @include box-shadow(none);
+    outline: none;
+}
+
+// disabled inputs
+input:disabled, select:disabled, textarea:disabled {
+    opacity: 0.4;
+    &:hover {
+        cursor: not-allowed;
+    }
+    // use JS to target the corresponding label to add aria-disabled to it
 }
 
 
-// Base checkbox and radio styling
 
-input[type="radio"], input[type="checkbox"] {
+
+input[type="radio"], 
+input[type="checkbox"] {
     position: absolute;
     opacity: 0; // hide from view, but it's clickable on mobile
     z-index: 100;
-    top: $checkbox-width / 2;
-    left: 0;
+    top: 0;
+    left: 5px;
     width: $checkbox-width;
     height: $checkbox-width;
 }
 
-input[type="radio"] + label:before, 
-input[type="checkbox"] + label:before {
-    //use a blank space to get the height correct
-    content: "\00a0"; //;
-    display: block;
-    //ensure even widhts/heights for the radial gradient to sit in the middle
-    width: $checkbox-width;
-    height: $checkbox-width;
-    background: $input-bg;
-    border: 1px solid $input-border;
-    position: absolute;
-    top: $checkbox-width / 2;
-    left: 0;
-    font-family: "FontAwesome";
-    line-height: 30px;
-    text-align: center;
-    @include font-size($body-copy-size);
-    //align to baseline of label
-    margin: 0 10px -2px 0;
+input[type="radio"] + label, 
+input[type="checkbox"] + label {
+    // Set padding so the before elements are positioned correctly
+    padding: ($checkbox-width / 3.5) 0 0 $checkbox-width + ($layout-gutter-width / 2); 
+    &:before {
+        //use a blank space to get the height correct
+        content: "\00a0"; //;
+        display: block;
+        //ensure even widhts/heights for the radial gradient to sit in the middle
+        width: $checkbox-width;
+        height: $checkbox-width;
+        background: $input-bg;
+        border: 1px solid $input-border;
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-family: "FontAwesome";
+        line-height: 30px;
+        text-align: center;
+        @include font-size($body-copy-size);
+    }
 }
 

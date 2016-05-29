@@ -11,6 +11,102 @@
   position: absolute; }
 
 /* This mixin creates an arrow as an inline element. Any spacing or placement will have to be further defined */
+/* line 3, ../scss/_2_tools/_form-debug.scss */
+.debug-key {
+  padding: 20px;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  width: auto;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #ccc;
+  border-bottom-left-radius: 10px; }
+/* line 4, ../scss/_2_tools/_form-debug.scss */
+.debug-key[style] {
+  display: block !important; }
+/* line 17, ../scss/_2_tools/_form-debug.scss */
+.debug-key ul {
+  list-style: none;
+  margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: margin 0.25s ease-in-out, max-height 0.25s ease-in-out;
+  transition: margin 0.25s ease-in-out, max-height 0.25s ease-in-out; }
+/* line 24, ../scss/_2_tools/_form-debug.scss */
+.debug-key li {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  padding-right: 70px;
+  height: 0;
+  overflow: hidden; }
+/* line 31, ../scss/_2_tools/_form-debug.scss */
+.debug-key li:first-child {
+  margin: 0; }
+/* line 35, ../scss/_2_tools/_form-debug.scss */
+.debug-key li span {
+  position: absolute;
+  width: 60px;
+  height: 30px;
+  top: 0;
+  right: 0; }
+/* line 43, ../scss/_2_tools/_form-debug.scss */
+.debug-key input[type=checkbox] {
+  display: inline-block;
+  position: static;
+  width: auto;
+  height: auto;
+  margin-right: 10px; }
+/* line 49, ../scss/_2_tools/_form-debug.scss */
+.debug-key input[type=checkbox] + span {
+  font-weight: 700;
+  display: inline-block;
+  position: static; }
+/* line 55, ../scss/_2_tools/_form-debug.scss */
+.debug-key input[type=checkbox]:checked ~ ul {
+  margin: 20px 60px 60px 40px;
+  max-height: 300px;
+  -webkit-transition: margin 0.25s ease-in-out, max-height 0.25s ease-in-out;
+  transition: margin 0.25s ease-in-out, max-height 0.25s ease-in-out; }
+/* line 59, ../scss/_2_tools/_form-debug.scss */
+.debug-key input[type=checkbox]:checked ~ ul li {
+  height: auto;
+  margin: 20px 0 0 0; }
+
+/* line 69, ../scss/_2_tools/_form-debug.scss */
+input[type="radio"], input[type="checkbox"] {
+  opacity: 1 !important; }
+
+/* line 74, ../scss/_2_tools/_form-debug.scss */
+.form-step > .field, .CompositeField, .input-colour {
+  background: #FF746D; }
+
+/* line 78, ../scss/_2_tools/_form-debug.scss */
+legend, .legend-colour {
+  background: #DE99E8; }
+
+/* line 83, ../scss/_2_tools/_form-debug.scss */
+.optionset li, .middleColumn, .parent-colour {
+  background: #B0A5FF; }
+
+/* line 88, ../scss/_2_tools/_form-debug.scss */
+.optionset li label, .middleColumn > :not(input).checkbox, .checkbox-label, .radio-labels-colour {
+  background: #E89958; }
+
+/* line 92, ../scss/_2_tools/_form-debug.scss */
+.field.text, .text-labels-colour {
+  background: #FFD649; }
+
+/* line 96, ../scss/_2_tools/_form-debug.scss */
+.field-support-text, .field-support-colour {
+  background: #9AFFDE; }
+
+/* line 100, ../scss/_2_tools/_form-debug.scss */
+.field-validation, .field-validation-colour, .error.message {
+  background: red !important;
+  color: #fff !important; }
+
 /* line 4, ../scss/_3_generic/_reset.scss */
 input, label, textarea, legend, form li, form ul, form ol, fieldset {
   margin: 0;
@@ -150,11 +246,11 @@ input:focus, textarea:focus {
   outline: none; }
 
 /* line 44, ../scss/_4_base/forms/_inputs-base.scss */
-input:disabled {
+input:disabled, select:disabled, textarea:disabled {
   opacity: 0.4;
   cursor: not-allowed; }
 
-/* line 52, ../scss/_4_base/forms/_inputs-base.scss */
+/* line 53, ../scss/_4_base/forms/_inputs-base.scss */
 input[type="radio"], input[type="checkbox"] {
   position: absolute;
   opacity: 0;
@@ -164,7 +260,7 @@ input[type="radio"], input[type="checkbox"] {
   width: 32px;
   height: 32px; }
 
-/* line 63, ../scss/_4_base/forms/_inputs-base.scss */
+/* line 64, ../scss/_4_base/forms/_inputs-base.scss */
 input[type="radio"] + label:before, input[type="checkbox"] + label:before {
   content: "\00a0";
   display: block;
@@ -199,7 +295,11 @@ input[type="radio"] + label.error:before {
   background: url("../images/svg-sprite.svg") #ececec -32px 0;
   background-size: 320px; }
 
-/* line 10, ../scss/_4_base/forms/_select.scss */
+/* line 9, ../scss/_4_base/forms/_select.scss */
+select {
+  display: block; }
+
+/* line 14, ../scss/_4_base/forms/_select.scss */
 .dropdown .middleColumn {
   background: #ececec;
   height: 42px;
@@ -207,7 +307,7 @@ input[type="radio"] + label.error:before {
   width: 50%;
   position: relative;
   z-index: 1; }
-/* line 17, ../scss/_4_base/forms/_select.scss */
+/* line 21, ../scss/_4_base/forms/_select.scss */
 .dropdown .middleColumn:after {
   display: block;
   content: "";
@@ -219,7 +319,7 @@ input[type="radio"] + label.error:before {
   top: 0;
   right: 0;
   z-index: 2; }
-/* line 30, ../scss/_4_base/forms/_select.scss */
+/* line 34, ../scss/_4_base/forms/_select.scss */
 .dropdown .middleColumn select {
   -webkit-appearance: none;
   background: transparent;
@@ -233,7 +333,7 @@ input[type="radio"] + label.error:before {
   /* If you add too much padding here, the options won't show in IE */
   position: relative;
   z-index: 3; }
-/* line 41, ../scss/_4_base/forms/_select.scss */
+/* line 45, ../scss/_4_base/forms/_select.scss */
 .dropdown .middleColumn select:focus {
   border: 1px solid #421949;
   -webkit-box-shadow: none;
@@ -304,215 +404,6 @@ input[type="radio"] + label.error:before {
     width: 31.83333%;
     vertical-align: top;
     flex: 0 0 31.83333%; } }
-
-/* line 1, ../scss/_6_components/_intro-img.scss */
-.intro-img {
-  display: -webkit-box;
-  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
-  display: -ms-flexbox;
-  /* TWEENER - IE 10 */
-  display: -webkit-flex;
-  /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
-  display: flex;
-  /* NEW, Spec - Firefox, Chrome, Opera */
-  background-color: #214385;
-  background-position: center;
-  background-size: cover;
-  justify-content: flex-end;
-  -webkit-justify-content: flex-end; }
-/* line 8, ../scss/_6_components/_intro-img.scss */
-.intro-img--col2 {
-  padding: 50px 70px;
-  width: 50%;
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 50%;
-  -moz-box-flex: 0;
-  -moz-flex: 0 0 50%;
-  -ms-flex: 0 0 50%;
-  flex: 0 0 50%;
-  background-color: rgba(33, 67, 133, 0.95); }
-/* line 15, ../scss/_6_components/_intro-img.scss */
-.intro-img h2 {
-  font-weight: 100;
-  color: #fff;
-  font-size: 30px;
-  font-size: 3rem; }
-/* line 20, ../scss/_6_components/_intro-img.scss */
-.intro-img p {
-  color: #fff;
-  margin-top: 20px; }
-/* line 24, ../scss/_6_components/_intro-img.scss */
-.intro-img button {
-  font-size: 14px;
-  font-size: 1.4rem;
-  margin-top: 40px; }
-/* line 30, ../scss/_6_components/_intro-img.scss */
-.intro-hero + .intro-img, .intro-img + .intro-img {
-  margin-top: 60px; }
-
-/* line 1, ../scss/_6_components/_intro-hero.scss */
-.intro-hero {
-  background-color: #214385;
-  background-position: center top;
-  padding-top: 200px;
-  position: relative;
-  overflow: hidden;
-  background-size: 120%;
-  background-repeat: no-repeat; }
-@media screen and (min-width: 590px) {
-  /* line 1, ../scss/_6_components/_intro-hero.scss */
-  .intro-hero {
-    padding-top: 280px; } }
-@media screen and (min-width: 768px) {
-  /* line 1, ../scss/_6_components/_intro-hero.scss */
-  .intro-hero {
-    padding-top: 350px;
-    background-size: contain; } }
-@media screen and (min-width: 992px) {
-  /* line 1, ../scss/_6_components/_intro-hero.scss */
-  .intro-hero {
-    padding-top: 400px; } }
-/* line 19, ../scss/_6_components/_intro-hero.scss */
-.intro-hero:before {
-  display: block;
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(13, 171, 255, 0.6);
-  z-index: 2; }
-/* line 32, ../scss/_6_components/_intro-hero.scss */
-.intro-hero .content-wrapper {
-  color: #fff;
-  padding: 20px;
-  background-color: rgba(33, 67, 133, 0.9);
-  position: relative;
-  z-index: 3;
-  text-align: center; }
-@media screen and (min-width: 480px) {
-  /* line 32, ../scss/_6_components/_intro-hero.scss */
-  .intro-hero .content-wrapper {
-    padding: 30px 60px; } }
-@media screen and (min-width: 768px) {
-  /* line 32, ../scss/_6_components/_intro-hero.scss */
-  .intro-hero .content-wrapper {
-    padding: 50px 120px; } }
-/* line 47, ../scss/_6_components/_intro-hero.scss */
-.intro-hero h2 {
-  color: #fff; }
-/* line 50, ../scss/_6_components/_intro-hero.scss */
-.intro-hero p {
-  margin-top: 20px; }
-/* line 55, ../scss/_6_components/_intro-hero.scss */
-h1 + .intro-hero, h2 + .intro-hero, h3 + .intro-hero {
-  margin-top: 60px; }
-
-/* line 1, ../scss/_6_components/_intro-neutral.scss */
-.intro-neutral {
-  background-color: #ececec; }
-/* line 3, ../scss/_6_components/_intro-neutral.scss */
-.intro-neutral .intro-img--col2 {
-  background-color: transparent; }
-/* line 6, ../scss/_6_components/_intro-neutral.scss */
-.intro-neutral p, .intro-neutral h2 {
-  color: #3f3f42; }
-
-/* line 9, ../scss/_6_components/_promo-block.scss */
-.promo-block {
-  display: -webkit-box;
-  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
-  display: -ms-flexbox;
-  /* TWEENER - IE 10 */
-  display: -webkit-flex;
-  /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
-  display: flex;
-  /* NEW, Spec - Firefox, Chrome, Opera */
-  -webkit-flex-flow: column wrap;
-  flex-flow: column wrap;
-  justify-content: space-between;
-  -webkit-justify-content: space-between; }
-/* line 13, ../scss/_6_components/_promo-block.scss */
-.promo-block .flex-item {
-  padding-left: 13.33333px;
-  padding-right: 13.33333px;
-  padding-bottom: 13.33333px; }
-/* line 18, ../scss/_6_components/_promo-block.scss */
-.promo-block .flex-item h2 {
-  font-weight: 100;
-  margin-top: 13.33333px;
-  font-size: 22px;
-  font-size: 2.2rem; }
-/* line 23, ../scss/_6_components/_promo-block.scss */
-.promo-block .flex-item p {
-  margin-top: 13.33333px; }
-/* line 26, ../scss/_6_components/_promo-block.scss */
-.promo-block .flex-item a {
-  display: block;
-  font-size: 14px;
-  font-size: 1.4rem;
-  background-color: #214385;
-  color: #fff;
-  width: 100%; }
-/* line 12, ../scss/_2_tools/_button-base-mixin.scss */
-.promo-block .flex-item a:hover, .promo-block .flex-item a:focus, .promo-block .flex-item a.focus, .promo-block .flex-item a:active {
-  color: #fff;
-  background-color: red;
-  border-color: transparent;
-  cursor: pointer; }
-/* line 34, ../scss/_6_components/_promo-block.scss */
-.promo-block .flex-item--img {
-  padding: 0; }
-/* line 36, ../scss/_6_components/_promo-block.scss */
-.promo-block .flex-item--img img {
-  width: 100%;
-  max-width: 100%;
-  height: auto; }
-/* line 45, ../scss/_6_components/_promo-block.scss */
-.intro-hero + .promo-block, .intro-img + .promo-block {
-  margin-top: 60px; }
-
-/* line 50, ../scss/_6_components/_promo-block.scss */
-.promo-block--abs {
-  position: relative;
-  padding-bottom: 40px; }
-/* line 53, ../scss/_6_components/_promo-block.scss */
-.promo-block--abs > div {
-  padding: 0 13.33333px; }
-/* line 56, ../scss/_6_components/_promo-block.scss */
-.promo-block--abs .promo-block--abs-img {
-  padding: 0; }
-/* line 59, ../scss/_6_components/_promo-block.scss */
-.promo-block--abs img {
-  width: 100%; }
-/* line 62, ../scss/_6_components/_promo-block.scss */
-.promo-block--abs h2 {
-  font-weight: 100;
-  margin-top: 13.33333px;
-  font-size: 22px;
-  font-size: 2.2rem; }
-/* line 67, ../scss/_6_components/_promo-block.scss */
-.promo-block--abs p {
-  margin-top: 13.33333px; }
-/* line 71, ../scss/_6_components/_promo-block.scss */
-.promo-block--abs .promo-block--abs-link {
-  position: absolute;
-  width: 100%;
-  bottom: 13.33333px; }
-/* line 76, ../scss/_6_components/_promo-block.scss */
-.promo-block--abs a {
-  font-size: 14px;
-  font-size: 1.4rem;
-  background-color: #214385;
-  display: block;
-  color: #fff; }
-/* line 12, ../scss/_2_tools/_button-base-mixin.scss */
-.promo-block--abs a:hover, .promo-block--abs a:focus, .promo-block--abs a.focus, .promo-block--abs a:active {
-  color: #fff;
-  background-color: red;
-  border-color: transparent;
-  cursor: pointer; }
 
 /* line 1, ../scss/_6_components/_form-progress-bar.scss */
 .userform-progress {

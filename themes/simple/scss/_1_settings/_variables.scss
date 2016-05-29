@@ -93,15 +93,20 @@ $margin-xl        : $layout-gutter-width*2;
 
 // Forms
 
+//input background
 $input-bg               : $gray-10;
 $input-border           : $brand-primary;
+// checkbox width which is also used for the height so it renders square
 $checkbox-width         : 32px;
+// base input width. 100% allows it to resize to it's container on small screens
 $input-width            : 100%;
+// Set a max input length for large screens, so the input doesn't render with a width of 1100px
+$input-max-length       : 500px;
+// Height of your input
 $input-height           : 42px;
 $input-left-pad         : $margin-xs;
 $input-focus            : $brand-primary-70;
 $placeholder            : $gray-70;
-$input-max-length       : 500px;
 
 $fieldset-margin        : $margin-lg;
 $check-radio-top-margin : $margin-sm;

@@ -6,7 +6,11 @@
 
 $svg-sprite-size : (($input-height - 1) / 50) * $svg-sprite-width;
 
+select {
+    display: block; // make sure it sits on it's own line, as labels are inline-blocks for a reason
+}
 
+// Following for Silverstripe
 .dropdown .middleColumn {
     background: $input-bg;
     height: $input-height;

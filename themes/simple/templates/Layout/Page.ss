@@ -22,128 +22,44 @@
             <p>text, email, number, tel, url, date</p>
         </form>
 
+        <form>
+            <fieldset>
+                <legend>Select fields</legend>
+                
+                <label for="selectbasic">Standard select field</label>
+                <div class="select-wrapper"> <%-- Wrapper to allow styling of the select. The background and arrow are applied to this level --%>
+                    <select id="selectbasic" name="selectbasic" class="">
+                      <option value="1">Option one</option>
+                      <option value="2">Option two</option>
+                    </select>
+                </div>
 
-      <h2>Component testing</h2>
+                <label for="selectbasic-disabled">Standard disabled select field</label>
+                <div class="select-wrapper"> <%-- Wrapper to allow styling of the select. The background and arrow are applied to this level --%>
+                    <select id="selectbasic-disabled" name="selectbasic" class="" disabled>
+                      <option value="1">Option one</option>
+                      <option value="2">Option two</option>
+                    </select>
+                </div>
 
-      <div class="intro-hero" style="background-image: url('http://blogs.c.yimg.jp/res/blog-ab-eb/koichi_oto/folder/671482/40/32689740/img_0');">
-        <div class="content-wrapper">
-          <h2>Business.govt.nz is focused on providing resources that are useful for businesses like yours.</h2>
-          <p>As stands out like chrissie also as busy as a cubby house. She'll be right cane toad where trent from punchy amber fluid. milk bar no worries it'll be your shout. As dry as a top end bloody gutful of cranky. As dry as a dole bludger flamin it'll be sickie. As cross as a quid no worries as dry as a cut lunch. Built like a corker how it'll be truckie.</p>
-          <p>As stands out like chrissie also as busy end bloody gutful of cranky. As dry as a dole bludger flamin it'll be sickie. As cross as a quid no worries as dry as a cut lunch. Built like a corker how it'll be truckie.</p>
-        </div>
-      </div>
+                <label for="select-multi">Multi select field</label>
+                <select id="select-multi" name="selectmultiple" class="" multiple="multiple">
+                  <option value="1">Option one</option>
+                  <option value="2">Option two</option>
+                </select>
 
+                <label for="select-multi-disabled">Disabled multi select field</label>
+                <select id="select-multi-disabled" name="selectmultiple" class="" multiple="multiple" disabled>
+                  <option value="1">Option one</option>
+                  <option value="2">Option two</option>
+                </select>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Upload field</legend>
+            </fieldset>
+        </form>
 
-      <div class="intro-img" style="background-image: url('https://midletonheritage.files.wordpress.com/2015/05/hms-revenge-wikipedia.jpg');">
-        <div class="intro-img--col2">
-          <h2>Starting a business</h2>
-          <p>As stands out like chrissie also as busy as a cubby house. She'll be right cane toad where trent from punchy amber fluid. milk bar no worries it'll be your shout. As dry as a top end bloody gutful of cranky. As dry as a dole bludger flamin it'll be sickie. As cross as a quid no worries as dry as a cut lunch. Built like a corker how it'll be truckie.</p>
-          <button class="btn-action">Call to action</button>
-        </div>
-      </div>
-
-      <div class="intro-img intro-neutral" style="background-image: url('{$ThemeDir}/images/elephant.png');">
-        <div class="intro-img--col2">
-          <h2>Starting a business</h2>
-          <p>As stands out like chrissie also as busy as a cubby house. She'll be right cane toad where trent from punchy amber fluid. milk bar no worries it'll be your shout. As dry as a top end bloody gutful of cranky. As dry as a dole bludger flamin it'll be sickie. As cross as a quid no worries as dry as a cut lunch. Built like a corker how it'll be truckie.</p>
-          <button class="btn-action">Call to action</button>
-        </div>
-      </div>
-
-      <div class="intro">
-          <h2>Starting a business</h2>
-          <p>As stands out like chrissie also as busy as a cubby house. She'll be right cane toad where trent from punchy amber fluid. milk bar no worries it'll be your shout. As dry as a top end bloody gutful of cranky. As dry as a dole bludger flamin it'll be sickie. As cross as a quid no worries as dry as a cut lunch. Built like a corker how it'll be truckie.</p>
-      </div>
-
-      <h2>Promo's 3 column with nested flex</h2>
-
-      <div class="promo-grid-3">
-          <div class="promo-block">
-              <div class="flex-item flex-item--img">
-                <img src="http://blogs.c.yimg.jp/res/blog-ab-eb/koichi_oto/folder/671482/40/32689740/img_0">
-              </div>
-            <%-- <div class="promo-block-content"> --%>
-              <div class="flex-item">
-                <h2>Starting a business as stands out like chrissie also as busy as a cubby house. She'll be right cane toad where trent from punchy </h2>
-              </div>
-              <div class="flex-item">
-                <p>As stands out like chrissie right cane toad where trent from punchy amber fluid. milk bar no worries it'll be your shout. As dry as a top end bloody gutful of cranky. Built like a corker how it'll be truckie.</p>
-              </div>
-              <div class="flex-item">
-                <a href="#" class="btn-action">Call to action</a>
-              </div>
-            <%-- </div> --%>
-          </div>
-       
-          <div class="promo-block">
-            <%-- <div class="promo-block-content"> --%>
-              <div class="flex-item">
-                <h2>Starting a business as stands out like chrissie also as busy as a cubby house. She'll be right cane toad where trent from punchy </h2>
-              </div>
-              <div class="flex-item">
-                <a href="#" class="btn-action">Call to action</a>
-              </div>
-            <%-- </div> --%>
-          </div>
-       
-          <div class="promo-block">
-              <div class="flex-item">
-                <h2>Starting a business</h2>
-              </div>
-              <div class="flex-item">
-                <p>As stands out like chrissie also as busy as a cubby house. She'll be right cane toad where trent from punchy amber fluid. milk bar no worries it'll be your shout. As dry as a top end bloody gutful of cranky. As dry as a dole bludger flamin it'll be sickie. As cross as a quid no worries as dry as a cut lunch. Built like a corker how it'll be truckie.</p>
-              </div>
-              <div class="flex-item">
-                <a href="#" class="btn-action">Call to action</a>
-              </div>
-            </div>
-          </div>
-      </div>
-
-
-      <h2>Promo's 3 column with absolute links</h2>
-
-      <div class="promo-grid-3">
-        <div class="promo-block--abs">
-            <div class="promo-block--abs-img">
-              <img src="http://blogs.c.yimg.jp/res/blog-ab-eb/koichi_oto/folder/671482/40/32689740/img_0">
-            </div>
-          <%-- <div class="promo-block-content"> --%>
-            <div class="">
-              <h2>Starting a business as stands out like chrissie also as busy as a cubby house. She'll be right cane toad where trent from punchy </h2>
-            </div>
-            <div class="">
-              <p>As stands out like chrissie right cane toad where trent from punchy amber fluid. milk bar no worries it'll be your shout. As dry as a top end bloody gutful of cranky. Built like a corker how it'll be truckie.</p>
-            </div>
-            <div class="promo-block--abs-link">
-              <a href="#" class="btn-action">Call to action</a>
-            </div>
-          <%-- </div> --%>
-        </div>
-     
-        <div class="promo-block--abs">
-            <div class="">
-              <h2>Starting a business as stands out like chrissie also as busy as a cubby house. She'll be right cane toad where trent from punchy </h2>
-            </div>
-            <div class="promo-block--abs-link">
-              <a href="#" class="btn-action">Call to action</a>
-            </div>
-          <%-- </div> --%>
-        </div>
-     
-        <div class="promo-block--abs">
-            <div class="">
-              <h2>Starting a business</h2>
-            </div>
-            <div class="">
-              <p>As stands out like chrissie also as busy as a cubby house. She'll be right cane toad where trent from punchy amber fluid. milk bar no worries it'll be your shout. As dry as a top end bloody gutful of cranky. As dry as a dole bludger flamin it'll be sickie. As cross as a quid no worries as dry as a cut lunch. Built like a corker how it'll be truckie.</p>
-            </div>
-            <div class="promo-block--abs-link">
-              <a href="#" class="btn-action">Call to action</a>
-            </div>
-        </div>
-      </div>
-    </div>
 
 
 
