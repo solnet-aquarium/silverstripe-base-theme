@@ -1,6 +1,8 @@
 
 
 label {
+    max-width: $label-max-length;
+    line-height: $body-copy-line-height;
     // disabled class added by JS
     &[aria-disabled="true"] {
         opacity: 0.4;

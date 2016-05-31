@@ -53,11 +53,9 @@
 	
 	<% include Header %>
 	<% include MainNav %>
-	<main>
-		<div class="container" id="layout">
+	<div class="container" id="layout">
 			$Layout
-		</div>
-	</main>
+	</div>
 	<% include Footer %>
 
 	<% if SiteConfig.GACode %>

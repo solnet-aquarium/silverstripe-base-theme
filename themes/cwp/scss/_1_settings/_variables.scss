@@ -59,7 +59,7 @@ $font-weight-h6     : 700;
 
 $body-copy-size         : 14;
 $body-copy-weight       : 300;
-$body-copy-line-height  : 1.9rem;
+$body-copy-line-height  : 150%; // use percentage (unitless values). PX and REM will be inherited by child element and will be incorrect if child font size is different. However, percentage will adjust according.
 $link-underline-offset  : 0.1rem; // position the link underline. This is influenced by the line height
 $body-copy              : $gray-80;
 
@@ -106,7 +106,9 @@ $checkbox-v-spacing     : 20px;
 // base input width. 100% allows it to resize to it's container on small screens
 $input-width            : 100%;
 // Set a max input length for large screens, so the input doesn't render with a width of 1100px
-$input-max-length       : 500px;
+$input-max-length       : 600px;
+// Set a max label length for large screens, so line lengths can be constrained for readibility
+$label-max-length       : $input-max-length;
 // Height of your input
 $input-height           : 42px;
 $input-left-pad         : $margin-xs;

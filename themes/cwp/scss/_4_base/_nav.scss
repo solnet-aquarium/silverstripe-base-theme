@@ -1,0 +1,10 @@
+nav {
+    ul {
+        // add clear fixes to the ul so it retains the correct height with floating <li> items inside
+        &:before, &:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    }
+}

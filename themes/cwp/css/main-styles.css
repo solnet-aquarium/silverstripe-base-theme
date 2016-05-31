@@ -61,12 +61,18 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 100;
   font-size: 30px;
   font-size: 3rem;
-  line-height: 150px;
+  line-height: 150%;
+}
+
+nav ul:before, nav ul:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 20px;
+  padding-left: 20px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -87,15 +93,15 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .container-fluid {
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 20px;
+  padding-left: 20px;
   margin-right: auto;
   margin-left: auto;
 }
 
 .row {
-  margin-right: -15px;
-  margin-left: -15px;
+  margin-right: -20px;
+  margin-left: -20px;
 }
 .row:before, .row:after {
   display: table;
@@ -106,8 +112,8 @@ h1, h2, h3, h4, h5, h6 {
 .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
@@ -954,6 +960,10 @@ form {
   margin-top: 60px;
 }
 
+label {
+  max-width: 600px;
+  line-height: 150%;
+}
 label[aria-disabled="true"] {
   opacity: 0.4;
 }
@@ -985,7 +995,7 @@ input[type="url"],
 input[type="search"] {
   display: block;
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
   height: 42px;
   padding-left: 13.33333px;
   background: #ececec;
@@ -1152,13 +1162,9 @@ select {
   outline: none;
 }
 
-.field-group + .field-group,
-.field.checkbox + .field-group,
-.field-group + .field.checkbox,
-.field.checkbox + .CompositeField,
-.CompositeField + .CompositeField,
-.CompositeField + .field-group,
-.field-group + .CompositeField,
+.field-group,
+.field.checkbox,
+.CompositeField,
 legend + .middleColumn {
   margin-top: 60px;
 }
@@ -1264,59 +1270,6 @@ pre {
     vertical-align: top;
     flex: 0 0 31.83333%;
   }
-}
-
-h1 {
-  font-size: 50px;
-  font-size: 5rem;
-  line-height: 150%;
-}
-
-h2 {
-  color: #1e87d7;
-  margin-top: 80px;
-  font-size: 38px;
-  font-size: 3.8rem;
-  line-height: 150%;
-}
-
-h3 {
-  margin-top: 26.66667px;
-  font-size: 26px;
-  font-size: 2.6rem;
-  line-height: 150%;
-}
-
-.tk-header {
-  background-color: #3e5868;
-  color: #fff;
-  padding: 40px;
-  border-bottom: 3px solid #1e87d7;
-}
-
-footer {
-  margin-top: 40px;
-  height: 250px;
-  background: #1e87d7;
-}
-
-span[data-code-snippet] {
-  display: block;
-  padding: 40px;
-  border: 1px solid #97b1c1;
-  position: relative;
-  margin-top: 48px;
-}
-span[data-code-snippet]:before {
-  content: "Example";
-  line-height: 20px;
-  display: block;
-  position: absolute;
-  top: -48px;
-  right: -1px;
-  padding: 14px;
-  color: #fff;
-  background-color: #97b1c1;
 }
 
 .breadcrumbs p {
