@@ -12,11 +12,6 @@
   font-size: calculateRem($size);
 }
 
-@mixin line-height($size) {
-  line-height: $size * 1px;
-  line-height: calculateRem($size);
-}
-
 // Body copy
 @mixin body-copy() {
   color: $body-copy;
@@ -43,7 +38,7 @@
 }
 
 // Visually hide an element
-.visuallyhidden {
+@mixin visuallyhidden() {
   margin: -1px;
   padding: 0;
   width: 1px;

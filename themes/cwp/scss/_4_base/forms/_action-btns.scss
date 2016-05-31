@@ -1,0 +1,25 @@
+// This is for the collection of buttons at the bottom of user defined forms
+
+.step-navigation {
+    margin-top: $field-group-v-spacing;
+    li {
+      float: left;
+      margin-right: 10px;
+    }
+    button {
+        @include button-base(#fff, $brand-primary, transparent, 5px, 20px);
+        &:hover {
+          @include button-hover(#fff, $brand-secondary, transparent);
+        }
+    }
+}
+
+.Actions {
+    input[type='submit'] {
+        @include button-base(#fff, $brand-primary, transparent, 5px, 20px);
+        &:hover {
+          @include button-hover(#fff, $brand-secondary, transparent);
+        }
+    }
+}
+

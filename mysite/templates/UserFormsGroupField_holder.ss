@@ -3,7 +3,6 @@
 		<legend>$Legend</legend>
 	<% end_if %>
 	
-	<div class="middleColumn">
 	<% loop $FieldList %>
 		<% if $ColumnCount %>
 			<div class="column-{$ColumnCount} $FirstLast">
@@ -13,7 +12,6 @@
 			$FieldHolder
 		<% end_if %>
 	<% end_loop %>
-	</div>
 
 	<% if $RightTitle %><span id="{$Name}_right_title" class="right-title field-support-text">$RightTitle</span><% end_if %>
 </$Tag>

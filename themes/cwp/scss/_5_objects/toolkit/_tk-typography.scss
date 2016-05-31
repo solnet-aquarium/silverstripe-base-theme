@@ -1,0 +1,20 @@
+h1 {
+  @include font-size(50);
+  line-height: 150%;
+}
+
+
+h2 {
+  color: $sol-secondary;
+  margin-top: $layout-gutter-width * 2;
+  @include font-size(38);
+  line-height: 150%;
+}
+
+
+h3 {
+  margin-top: $layout-gutter-width / 1.5;
+  @include font-size(26);
+  line-height: 150%;
+}
+

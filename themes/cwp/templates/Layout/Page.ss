@@ -9,7 +9,7 @@
 			$CommentsForm
 			<% include PrintShare %>
 		</div>
-		<% include LastEdited %>
+		<%-- <% include LastEdited %> --%>
 	</div>
 	<% if Menu(2) %>
 		<aside class="span3">

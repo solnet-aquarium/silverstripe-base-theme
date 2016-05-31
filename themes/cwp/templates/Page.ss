@@ -45,7 +45,7 @@
 	<% else %>
 		<link rel="apple-touch-icon-precomposed" href="{$BaseHref}{$ThemeDir}/ico/apple-touch-icon-57-precomposed.png">
 	<% end_if %>
-	<% require themedCSS('form-styles') %>
+	<% require themedCSS('main-styles') %>
 	
 </head>
 

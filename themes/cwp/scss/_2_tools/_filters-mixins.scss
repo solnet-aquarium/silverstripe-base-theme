@@ -1,0 +1,9 @@
+@mixin grayscale-filter($val:1) {
+  -webkit-filter: grayscale($val);
+  filter: grayscale($val);
+}
+
+@mixin blur-filter($val:10px) {
+  -webkit-filter: blur($val);
+  filter: blur($val);
+}

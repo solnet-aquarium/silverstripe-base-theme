@@ -7,12 +7,14 @@ $svg-sprite-size : ($checkbox-width / 50) * $svg-sprite-width;
 
 
 
+
+
 input[type="radio"] + label:before {
   border-radius: 50%;
 }
 
 input[type="radio"]:checked + label:before {
-    background: url('../img/svg-sprite.svg') $input-bg (($checkbox-width * -2) - 1) -1px; // icon is at position 3 on the sprite sheet. Position 1 has no value, so the modifier is -2. -1 is to adjust to put the dot right in the middle
+    background: url('../images/svg-sprite.svg') $input-bg (($checkbox-width * -2) - 1) -1px; // icon is at position 3 on the sprite sheet. Position 1 has no value, so the modifier is -2. -1 is to adjust to put the dot right in the middle
     background-size: $svg-sprite-size;
 }
 
@@ -28,3 +30,6 @@ input[type="radio"] + label.error:before {
   margin-top: $checkbox-v-spacing; // spacing between radio groups
   min-height: $checkbox-width; // make sure the container encompasses the label and absolute positioned radio
 }
+
+
+

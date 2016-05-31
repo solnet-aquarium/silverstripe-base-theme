@@ -1,0 +1,19 @@
+
+
+label {
+    // disabled class added by JS
+    &[aria-disabled="true"] {
+        opacity: 0.4;
+        &:hover {
+            cursor: not-allowed;
+        }
+        // use JS to target the corresponding label to add aria-disabled to it
+    }
+}
+
+.field-support-text, label span  {
+      // this is hint text
+      display: block; // we want it to sit on it's own line
+      margin-top: $input-label-v-spacing; // same as the spacing between the input and it's label
+      font-style: italic;
+    }

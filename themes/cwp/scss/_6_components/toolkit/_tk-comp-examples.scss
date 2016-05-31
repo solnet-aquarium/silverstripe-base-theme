@@ -1,0 +1,22 @@
+$line-height      : 20px;
+$text-box-padding : 14px;
+$text-box-height  : ($text-box-padding * 2) + $line-height;
+
+span[data-code-snippet] {
+    display: block;
+    padding: $layout-gutter-width;
+    border: 1px solid $sol-example-border;
+    position: relative;
+    margin-top: $text-box-height;
+    &:before {
+        content: "Example";
+        line-height: $line-height;
+        display: block;
+        position: absolute;
+        top: $text-box-height * -1;
+        right: -1px; //border width
+        padding: $text-box-padding;
+        color: #fff;
+        background-color: $sol-example-border;
+    }
+}

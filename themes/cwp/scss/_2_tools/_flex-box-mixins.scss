@@ -1,0 +1,57 @@
+// FLEX BOX MIXINS
+// 
+@mixin flexbox() {
+  display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;  /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+}
+
+@mixin flex-direction($value:row) {
+   -webkit-flex-direction: $value;
+   flex-direction: $value;
+}
+
+@mixin flex-wrap($value:wrap) {
+   -webkit-flex-wrap: $value;
+   flex-wrap: $value;
+}
+
+@mixin flex-flow($val:row, $val2:wrap) {
+  -webkit-flex-flow: $val $val2;
+  flex-flow: $val $val2;
+}
+
+@mixin flex($fg: 1, $fs: null, $fb: null) {
+    
+  // Set a variable to be used by box-flex properties
+  $fg-boxflex: $fg;
+
+  // Box-Flex only supports a flex-grow value so let's grab the
+  // first item in the list and just return that.
+  @if type-of($fg) == 'list' {
+    $fg-boxflex: nth($fg, 1);
+  }
+
+  -webkit-box-flex: $fg-boxflex;
+  -webkit-flex: $fg $fs $fb;
+  -moz-box-flex: $fg-boxflex;
+  -moz-flex: $fg $fs $fb;
+  -ms-flex: $fg $fs $fb;
+  flex: $fg $fs $fb;
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;  
+  -moz-box-ordinal-group: $val;     
+  -ms-flex-order: $val;     
+  -webkit-order: $val;  
+  order: $val;
+}
+
+@mixin justify($val) {
+  justify-content: $val;
+  -webkit-justify-content: $val;
+}
+
+

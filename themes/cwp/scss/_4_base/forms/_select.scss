@@ -24,7 +24,7 @@ select {
         content: "";
         width: $input-height - 1; // offset for parent border
         height: $input-height - 1;
-        background: url('../img/svg-sprite.svg') top left; // arrow icon and background colour or icon area
+        background: url('../images/svg-sprite.svg') top left; // arrow icon and background colour or icon area
         background-size: $svg-sprite-size;
         position: absolute;
         top: 0;

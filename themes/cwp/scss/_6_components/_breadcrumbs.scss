@@ -1,0 +1,36 @@
+$breadcrumb-chevron-size : 20px;
+
+.breadcrumbs {
+    p {
+        @include visuallyhidden();
+    }
+    ol {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        &:before, &:after {
+            display: table;
+            content: "";
+            clear: both;
+        }
+    }
+    li {
+        float: left;
+        display: block;
+        // Style the icons/chevrons between the links
+        &:after {
+            display: inline-block;
+            width: $breadcrumb-chevron-size;
+            height: $breadcrumb-chevron-size;
+            margin: 0 10px;
+            content: "";
+            background: url('../images/svg-sprite.svg') ($breadcrumb-chevron-size * -4) 0; // icon is at position 5 on the sprite sheet. The first icon is at postion 0, so the modifier is -4.
+            vertical-align: middle;
+            background-size: ($breadcrumb-chevron-size / 50) * $svg-sprite-width;
+        }
+        &.active:after {
+            // remove the icon from the active breadcrumb link. We retain the container for vertical spacing
+            background: none;
+        }
+    }
+}

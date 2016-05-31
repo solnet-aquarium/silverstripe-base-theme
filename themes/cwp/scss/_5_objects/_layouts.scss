@@ -1,0 +1,25 @@
+.promo-grid-3 {
+  @include flexbox();
+  @include justify(space-between);
+  @include flex-flow();
+  > div {
+    $cols: (1);
+    @include fb-columns($cols);
+    background-color: $gray-10;
+  }
+  @media screen and (min-width: $screen-sm) {
+    
+  }
+  @media screen and (min-width: $screen-md) {
+    > div {
+      $cols: (1,1);
+      @include fb-columns($cols, 2);
+    }
+  }
+  @media screen and (min-width: $screen-lg) {
+    > div {
+      $cols: (1,1,1);
+      @include fb-columns($cols, 1.5);
+    }
+  }
+}

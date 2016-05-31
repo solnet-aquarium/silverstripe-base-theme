@@ -8,7 +8,7 @@ $svg-sprite-size : ($checkbox-width / 50) * $svg-sprite-width;
 input[type="checkbox"]:checked ~ label:before {
     // nice transition into validation style
     @include transition(border-color $transition-timing);
-    background: url('../img/svg-sprite.svg') $input-bg ($checkbox-width * -1) 0;  // icon is at position 3 on the sprite sheet. Position 1 has no value, so the modifier is -1
+    background: url('../images/svg-sprite.svg') $input-bg ($checkbox-width * -1) 0;  // icon is at position 3 on the sprite sheet. Position 1 has no value, so the modifier is -1
     background-size: $svg-sprite-size;
 }
 

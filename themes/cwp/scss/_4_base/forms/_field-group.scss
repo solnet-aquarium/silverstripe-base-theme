@@ -1,0 +1,11 @@
+// Add vertical space between field groups. This means the first child won't get a top margin
+.field-group + .field-group, 
+.field.checkbox + .field-group, 
+.field-group + .field.checkbox,
+.field.checkbox  + .CompositeField,
+.CompositeField + .CompositeField,
+.CompositeField + .field-group,
+ .field-group + .CompositeField,
+ legend + .middleColumn {
+  margin-top: $field-group-v-spacing;
+}
