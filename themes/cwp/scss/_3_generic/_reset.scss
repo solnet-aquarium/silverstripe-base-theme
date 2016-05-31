@@ -6,7 +6,8 @@ label,
 textarea, 
 legend, 
 form li, 
-form ul, 
+form ul,
+nav ul, 
 form ol, 
 fieldset {
     margin: 0;
@@ -23,7 +24,13 @@ form ul {
     list-style: none;
 }
 
+p {
+    margin: 0;
+}
 
+ul {
+    margin-bottom: 0;
+}
 
 // Reset SS styles from UserForm.css
 

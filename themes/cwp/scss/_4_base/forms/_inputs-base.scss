@@ -1,7 +1,4 @@
-label {
-    // avoid block as this will span the whole width of the parent. This can have unexpected results for the user if they click in the middle of the page and an item is selected.
-    display: inline-block;
-}
+
 
 input, textarea, select {
     @include font-size(14);
@@ -28,7 +25,9 @@ input[type="search"] {
 
 // Textarea styling
 textarea {
+    display: block; // we want the inputs to stack under the labels
     width: $input-width;
+    max-width: $input-max-length; // set a max width so they don't end up being 1000px wide
     padding: $input-left-pad;
     background: $input-bg;
     border: 1px solid $input-border;

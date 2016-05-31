@@ -7,6 +7,7 @@ textarea,
 legend,
 form li,
 form ul,
+nav ul,
 form ol,
 fieldset {
   margin: 0;
@@ -21,6 +22,14 @@ fieldset {
 
 form ul {
   list-style: none;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin-bottom: 0;
 }
 
 .userform .left {
@@ -961,6 +970,7 @@ form {
 }
 
 label {
+  display: inline-block;
   max-width: 600px;
   line-height: 150%;
 }
@@ -975,10 +985,6 @@ label[aria-disabled="true"]:hover {
   display: block;
   margin-top: 13.33333px;
   font-style: italic;
-}
-
-label {
-  display: inline-block;
 }
 
 input, textarea, select {
@@ -1032,7 +1038,9 @@ input[type="search"]::-webkit-input-placeholder {
 }
 
 textarea {
+  display: block;
   width: 100%;
+  max-width: 600px;
   padding: 13.33333px;
   background: #ececec;
   border: 1px solid #214385;
@@ -1270,6 +1278,11 @@ pre {
     vertical-align: top;
     flex: 0 0 31.83333%;
   }
+}
+
+footer {
+  background-color: #3f3f42;
+  min-height: 120px;
 }
 
 .breadcrumbs p {

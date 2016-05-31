@@ -1,6 +1,7 @@
 
-
 label {
+    // avoid block as this will span the whole width of the parent. This can have unexpected results for the user if they click in the middle of the page and an item is selected.
+    display: inline-block;
     max-width: $label-max-length;
     line-height: $body-copy-line-height;
     // disabled class added by JS

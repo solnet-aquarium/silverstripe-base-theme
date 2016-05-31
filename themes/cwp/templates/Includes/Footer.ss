@@ -1,20 +1,22 @@
 <footer role="contentinfo">
 	<div  class="container">
 
-		<h2 class="nonvisual-indicator">Footer</h2>
+		<%-- <h2 class="nonvisual-indicator">Footer</h2> --%>
 
 		<% if Footer %>
-			<ul class="nav nav-pills pull-left">
-				<% with Footer %>
-					<% loop Children %>
-						<li class="$LinkingMode<% if $LinkingMode = current %> active<% end_if %>">
-							<a href="$Link" class="$LinkingMode">
-								$MenuTitle.XML
-							</a>
-						</li>
-					<% end_loop %>
-				<% end_with %>
-			</ul>
+			<nav>
+				<ul class="nav nav-pills pull-left">
+					<% with Footer %>
+						<% loop Children %>
+							<li class="$LinkingMode<% if $LinkingMode = current %> active<% end_if %>">
+								<a href="$Link" class="$LinkingMode">
+									$MenuTitle.XML
+								</a>
+							</li>
+						<% end_loop %>
+					<% end_with %>
+				</ul>
+			</nav>
 		<% end_if %>
 
 		<% if SiteConfig.FacebookURL || SiteConfig.TwitterUsername %>
