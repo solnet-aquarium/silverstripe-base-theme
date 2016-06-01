@@ -2,8 +2,6 @@
 
 Author: Darrell White
 
-
-
 ## Me and CWP
 
 
@@ -17,7 +15,7 @@ The focus so far is mainly on the base form components so they tick the accessib
 ## Form structure
 
 
-Our desired pattern for forms in the UX team is for a stacked layout as follows:
+Our desired pattern for forms in the UX team is for a stacked layout as follows ([examples here](http://solnetdigital.github.io/sdf/)):
 
 #### Text inputs
 1. Label
@@ -61,6 +59,20 @@ Start vague and simple, and slowly focus as you build up your SASS.
 Basically you break down your CSS to components. You still have an underlying base CSS which flows through everything. Then you further customise for your components, so you avoid overwriting CSS. This was a huge issue with Bootstrap. 
 
 If declarations are used over and over again for components, then you can move them up into the objects level. 
+
+#### Reserved words
+
+These are reserved for use as modifier classes and not to have any default declarations assigned
+
+- open
+- active
+- visible
+- error
+
+The reason for not assigning declarations to the .open class, we don't know how you will 'open' the component. It could be via display, or max-height or height. The above way allows you to customise it per component.
+
+These reserved words will be toggled by JS to change the state of a component.
+
 
 
 ## CWP JavaScript
