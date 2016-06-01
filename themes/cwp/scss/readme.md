@@ -42,10 +42,19 @@ Two methodologies have been followed for the creation of the SASS.
 
 Sadly the ITCSS git content has been taken down for reference. There is a good video that explains the [concept by the creator, Harry Roberts](https://www.youtube.com/watch?v=1OKZOV-iLj4).
 
+This jist of it:
+
+Start vague and simple, and slowly focus as you build up your SASS. 
+
+##### Structure
+1. **Settings:** This is your
+
 #### Object orientated CSS
 [Smashing magazine intro of OOCSS](https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/)
 
+Basically you break down your CSS to components. You still have an underlying base CSS which flows through everything. Then you further customise for your components, so you avoid overwriting CSS. This was a huge issue with Bootstrap. 
 
+If declarations are used over and over again for components, then you can move them up into the objects level. 
 
 
 ## CWP JavaScript
