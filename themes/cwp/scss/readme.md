@@ -40,10 +40,10 @@ Two methodologies have been followed for the creation of the SASS.
 
 #### Inverted triangle CSS
 
-Sadly the ITCSS git content has been taken down for reference. There is a good video that explains the [concept by the creator, Harry Roberts](https://www.youtube.com/watch?v=1OKZOV-iLj4)
+Sadly the ITCSS git content has been taken down for reference. There is a good video that explains the [concept by the creator, Harry Roberts](https://www.youtube.com/watch?v=1OKZOV-iLj4).
 
 #### Object orientated CSS
-
+[Smashing magazine intro of OOCSS](https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/)
 
 
 
