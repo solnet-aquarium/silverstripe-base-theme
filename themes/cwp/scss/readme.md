@@ -64,10 +64,11 @@ If declarations are used over and over again for components, then you can move t
 
 These are reserved for use as modifier classes and not to have any default declarations assigned
 
-- open
-- active
-- visible
-- error
+- **open:** component is open as opposed to a collapsed state. It's still visible in it's collapsed state in some way.
+- **active:** component is in an active state
+- **visible:** component is visable to all users - **visual and screen readers
+- **error:** component is in an error state
+- **content-area:** The main content area of a component. Best used to target for main typography area.
 
 The reason for not assigning declarations to the .open class, we don't know how you will 'open' the component. It could be via display, or max-height or height. The above way allows you to customise it per component.
 
