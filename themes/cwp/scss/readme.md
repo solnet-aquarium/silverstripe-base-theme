@@ -52,7 +52,7 @@ Start vague and simple, and slowly focus as you build up your SASS.
 3. **Generic:** Ok, finally some CSS... well VERY basic. Resets, very basic type settings that will flow through your whole project. You don't want to be setting any look and feel if it will need to be overwritten most components
 4. **Base:** Here we start to set up base styles for elements that will combine to make objects.
 5. **Objects:** Here we are starting to introduce our branding look and feel at an object level, such as form inputs.
-6. **Components:** 
+6. **Components:** Styles that bring the objects together. So you may have some specific stlying for a heading of a side panel widget.
 7. **Trumps:** !importants everywhere!!! Well, perhaps not, but these are edge cases that need a partcular 'tweak' to get it just right.
 
 #### Object orientated CSS
