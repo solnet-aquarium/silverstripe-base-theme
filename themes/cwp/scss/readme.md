@@ -47,7 +47,13 @@ This jist of it:
 Start vague and simple, and slowly focus as you build up your SASS. 
 
 ##### Structure
-1. **Settings:** This is your
+1. **Settings:** This is where you have your variables
+2. **Tools:** Mixins basically and anything else that serves as a tool for your SASS files
+3. **Generic:** Ok, finally some CSS... well VERY basic. Resets, very basic type settings that will flow through your whole project. You don't want to be setting any look and feel if it will need to be overwritten most components
+4. **Base:** Here we start to set up base styles for elements that will combine to make objects.
+5. **Objects:** Here we are starting to introduce our branding look and feel at an object level, such as form inputs.
+6. **Components:** 
+7. **Trumps:** !importants everywhere!!! Well, perhaps not, but these are edge cases that need a partcular 'tweak' to get it just right.
 
 #### Object orientated CSS
 [Smashing magazine intro of OOCSS](https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/)
