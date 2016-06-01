@@ -19,13 +19,13 @@ The focus so far is mainly on the base form components so they tick the accessib
 
 Our desired pattern for forms in the UX team is for a stacked layout as follows:
 
-### Text inputs
+#### Text inputs
 1. Label
 2. Support text 
 3. input
 4. validation message
 
-### Checkboxes and radio buttons
+#### Checkboxes and radio buttons
 1. input
 2. label
 3. validation
