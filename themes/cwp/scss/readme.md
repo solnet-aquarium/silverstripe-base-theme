@@ -36,7 +36,14 @@ Support text for these will appear with the legend.
 
 ## SASS structure and thinking
 
-To be continued...
+Two methodologies have been followed for the creation of the SASS. 
+
+#### Inverted triangle CSS
+
+Sadly the ITCSS git content has been taken down for reference. There is a good video that explains the [concept by the creator, Harry Roberts](https://www.youtube.com/watch?v=1OKZOV-iLj4)
+
+#### Object orientated CSS
+
 
 
 
