@@ -66,7 +66,7 @@ These are reserved for use as modifier classes and not to have any default decla
 
 - **open:** component is open as opposed to a collapsed state. It's still visible in it's collapsed state in some way.
 - **active:** component is in an active state
-- **visible:** component is visable to all users - **visual and screen readers
+- **visible:** component is visable to all users - visual and screen readers
 - **error:** component is in an error state
 - **content-area:** The main content area of a component. Best used to target for main typography area.
 
