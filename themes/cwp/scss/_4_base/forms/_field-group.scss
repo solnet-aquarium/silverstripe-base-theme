@@ -1,7 +1,8 @@
 // Add vertical space between field groups. This means the first child won't get a top margin
+// fieldset.field is to only target fieldsets that appear within the page, avoiding the page fieldset containers
 .field-group,
 .field.checkbox,
 .CompositeField,
- legend + .middleColumn {
+fieldset.field { 
   margin-top: $field-group-v-spacing;
 }

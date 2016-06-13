@@ -1173,7 +1173,7 @@ select {
 .field-group,
 .field.checkbox,
 .CompositeField,
-legend + .middleColumn {
+fieldset.field {
   margin-top: 60px;
 }
 
@@ -1224,11 +1224,6 @@ fieldset.error input[type="checkbox"] ~ label:before, fieldset.error input[type=
   background-color: #005470;
   border-color: transparent;
   cursor: pointer;
-}
-
-pre {
-  padding: 40px;
-  background: #ececec;
 }
 
 .promo-grid-3 {
