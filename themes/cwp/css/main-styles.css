@@ -1399,3 +1399,9 @@ footer {
   padding: 15px 15px;
   width: 100%;
 }
+.userform-progress button[style] {
+  margin-left: 0 !important;
+}
+.userform-progress li.current button {
+  background-color: #6698a9;
+}
